@@ -42,7 +42,7 @@ const ForgotPassword = () => {
                 </div>
             </div>
 
-            <img className='forgotpass-mandela-left' src="https://i.ibb.co/nP7CWy8/leftbg.png" alt="" />
+            <img className='forgotpass-mandela-left' src="https://i.ibb.co/nP7CWy8/leftbg.png" alt="mandela" />
 
 
             <img className='forgotpass-mandela-right' src="https://i.ibb.co/xH7HRQJ/rightbg.png" alt="" />
