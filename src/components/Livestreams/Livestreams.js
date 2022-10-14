@@ -2,7 +2,9 @@ import React from 'react'
 
 const Livestreams = () => {
   return (
-    <div><p>this is livestreams page</p></div>
+    <div>
+      <p>this is live streams page</p>
+    </div>
   )
 }
 
