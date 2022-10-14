@@ -26,6 +26,8 @@ function App() {
         <Route path='/upload' element={<Upload />}></Route>
         <Route path='/livestreams' element={<Livestreams />}></Route>
         <Route path='/jobs' element={<Jobs />}></Route>
+        <Route path='/forgotPass' element={<ForgotPassword />}></Route>
+        <Route path='/uploadphoto' element={<Upload />}></Route>
       </Routes>
 
     </div>
