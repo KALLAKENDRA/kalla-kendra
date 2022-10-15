@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 2%;
+  background-image: url(../../Assets/bghome.png);
+  color: #ffffff;
+}
+
+.container .live-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding-top: 25px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.content-des {
+  width: 450px;
+  text-align: start;
+}
+
+.content-des h1 {
+  font-size: 35px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.content-des p {
+  margin-bottom: 15px;
+}
+.content-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.content-icon img {
+  padding: 0 10px;
+}
+.content-icon a {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.cards {
+  display: flex;
+}
+.card-img img {
+  width: 100%;
+}
