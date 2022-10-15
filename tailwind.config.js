@@ -3,9 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      spacing:{
+        '100':'30rem'
+      },
       screens: {
-        'lg-md':{'min': '822px', 'max': '1190px'},
-        'lg-md2':{'min': '822px', 'max': '1000px'},
+        'lg-md':{'min': '1024px', 'max': '1150px'},
       },
 
       width: {
