@@ -8,6 +8,7 @@ const Jobs = () => {
 
 
   return (
+
     <>
 
       <div className="top-0 absolute bg-cover">
