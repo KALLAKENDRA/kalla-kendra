@@ -31,7 +31,7 @@ const Home = () => {
         <div><h1 className="text-6xl text-white font-acme">Welcome! to kalla kendra</h1></div>
         <div><Link to='/startyourjourny'><button className="w-60 h-16 bg-lightRose rounded-full mt-11 text-iridium text-2xl font-aclonica hover:bg-yellow ">World of Artist</button></Link></div>
      </div>
-     <div className="relative flex justify-evenly mt-44">
+     <div className="relative flex justify-evenly mt-40">
         <img src={speaker1} alt="" />
         <img src={guitarist1} alt="" />
         <img src={Painter1} alt="" />
