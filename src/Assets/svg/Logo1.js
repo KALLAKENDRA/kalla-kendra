@@ -3,7 +3,7 @@ import React from "react";
 const logo1 = () => {
   return (
     <>
-      <div className='flex flex-col items-start text-white '>
+      <div className='flex flex-col items-center justify-center text-white '>
        
         <div>
           <svg

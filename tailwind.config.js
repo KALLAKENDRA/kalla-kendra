@@ -18,6 +18,7 @@ module.exports = {
         '114':'44rem',
         '116':'46rem',
         '118':'48rem',
+        '200':'90rem',
       },
       fontFamily: {
         acme:['Acme', 'sans-serif'],
