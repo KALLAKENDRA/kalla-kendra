@@ -13,7 +13,7 @@ import Navbar from '../Shared/Navbar/Navbar';
 const Home = () => {
   return (
     <>
-      <div className="relative z-10">
+      <div className="relative z-10 ">
         <Navbar/>
       </div>
       <div className="top-0 absolute bg-cover">
@@ -28,10 +28,10 @@ const Home = () => {
       </div>
      </div>
      <div className="relative -mt-96">
-        <div><h1 className="text-6xl text-white font-acme">Welcome! to kalla kendra</h1></div>
+        <div><h1 className="text-3xl md:text-6xl  mt-10 lg:mt-0 text-white font-acme">Welcome! to kalla kendra</h1></div>
         <div><Link to='/startyourjourny'><button className="w-60 h-16 bg-lightRose rounded-full mt-11 text-iridium text-2xl font-aclonica hover:bg-yellow ">World of Artist</button></Link></div>
      </div>
-     <div className="relative flex justify-evenly mt-40">
+     <div className="lg-md:w-48 lg-md:gap-10  lg-md:ml-20 lg-md:justify-between  relative flex flex-row  mt-40 w-16 gap-2   ml-5  md:w-36 md:ml-6 lg:mt-32 lg:w-auto  lg:justify-evenly ">
         <img src={speaker1} alt="" />
         <img src={guitarist1} alt="" />
         <img src={Painter1} alt="" />
