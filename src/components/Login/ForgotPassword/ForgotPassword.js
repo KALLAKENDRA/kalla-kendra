@@ -7,33 +7,33 @@ const ForgotPassword = () => {
                 <div class="hero-content flex-col lg:flex-row-reverse">
 
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl items=center justify-center forgot-pass-portion text-white">
-                        <div class="card-body ">
+                        <div class="card-body w-full bg-opacity-25 ">
 
 
                             <div class="form-control pt-12">
                                 <label class="label">
                                     <span class="label-text text-white">Email</span>
                                 </label>
-                                <input type="text" class="input input-bordered input-field" />
+                                <input type="text" class="input input-bordered input-field bg-opacity-10 px-24" />
 
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text text-white">Password</span>
                                 </label>
-                                <input type="text" class="input input-bordered input-field " />
+                                <input type="text" class="input input-bordered input-field bg-opacity-10 " />
 
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text text-white">Confirm Password</span>
                                 </label>
-                                <input type="text" class="input input-bordered input-field " />
+                                <input type="text" class="input input-bordered input-field bg-opacity-10" />
 
                             </div>
-                            <div class="form-control mt-6 pt-24 ">
+                            <div class="form-control mt-6 pt-24 flex items-center">
 
-                                <button class="btn next-btn border-0">Next</button>
+                                <button class="btn bg-rosewood next-btn border-0">Next</button>
 
 
                             </div>
