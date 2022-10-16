@@ -23,6 +23,7 @@ module.exports = {
         acme:['Acme', 'sans-serif'],
         aclonica:['Aclonica', 'sans-serif'],
         roboto:['Roboto', 'sans-serif'],
+        inter:['Inter', 'sans-serif'],
       }
 
     },
