@@ -43,7 +43,7 @@ module.exports = {
       monsoon: '#888888',
       aquaHaze: '#F3F3F3',
       osloGrey: '#8D8D8D',
-
+      radial: "#8D0301",
     },
   },
   plugins: [require("daisyui")],
