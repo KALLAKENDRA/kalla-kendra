@@ -1,31 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      width:{
-        '53':'13.438rem',
-        '100':'30rem',
-        '102':'32rem',
-        '104':'34rem',
-        '106':'36rem',
-        '108':'38rem',
-        '110':'40rem',
-        '112':'42rem',
-        '113':'42.313rem',
-        '114':'44rem',
-        '116':'46rem',
-        '118':'48rem',
-        '200':'90rem',
+      spacing:{
+        '100':'30rem'
+      },
+      screens: {
+        'lg-md':{'min': '1024px', 'max': '1150px'},
+      },
+
+      width: {
+        53: "13.438rem",
+        100: "30rem",
+        102: "32rem",
+        104: "34rem",
+        106: "36rem",
+        108: "38rem",
+        110: "40rem",
+        112: "42rem",
+        113: "42.313rem",
+        114: "44rem",
+        116: "46rem",
+        118: "48rem",
+        200: "90rem",
       },
       fontFamily: {
-        acme: ['Acme', 'sans-serif'],
-        aclonica: ['Aclonica', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-      }
-
+        acme: ["Acme", "sans-serif"],
+        aclonica: ["Aclonica", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
     colors: {
       lightRose: '#FFC7C7',
@@ -47,4 +51,4 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
-}
+};
