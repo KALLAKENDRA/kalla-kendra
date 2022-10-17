@@ -25,6 +25,9 @@ module.exports = {
         118: "48rem",
         200: "90rem",
       },
+      height:{
+        720: "45rem"
+      },
       fontFamily: {
         acme: ["Acme", "sans-serif"],
         aclonica: ["Aclonica", "sans-serif"],
@@ -48,6 +51,8 @@ module.exports = {
       aquaHaze: '#F3F3F3',
       osloGrey: '#8D8D8D',
       radial: "#8D0301",
+      reedwood: "#9B2322",
+      greenWhite: "#E8E8E8",
     },
   },
   plugins: [require("daisyui")],
