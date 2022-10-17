@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegThumbsUp,  FaRegEye } from 'react-icons/fa';
+// import { FaRegThumbsUp,  FaRegEye } from 'react-icons/fa';
 
 const ModernArt = ({ art }) => {
   const { img, button, name, personName, inspect, like } = art;
@@ -14,13 +14,13 @@ const ModernArt = ({ art }) => {
           <div className="flex">
             <div className="flex">
               <button className="mt-1 text-white">
-              <FaRegThumbsUp/>
+              {/* <FaRegThumbsUp/> */}
               </button>
               <p className="ml-2 mt-2 font-light text-sm text-white">{like}</p>
             </div>
             <div className="flex ml-2">
               <button className="mt-1 ml-2 text-white">
-              <FaRegEye/>
+              {/* <FaRegEye/> */}
               </button>
               <p className="ml-2 mt-2 font-light text-sm text-white">{inspect}</p>
             </div>
