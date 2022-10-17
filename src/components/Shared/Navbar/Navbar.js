@@ -1,18 +1,20 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Logo1 from "../../../Assets/svg/Logo1";
 
 const Navbar = () => {
-  const activeLink = "text-black font-bold bg-yellow rounded-full px-3 py-2";
+  const activeLink = "text-black font-bold bg-aquaHaze  shadow-2xl rounded-full px-3 py-2";
   const normalLink = "font-bold text-white";
 
   return (
     <>
       <div className="flex flex-col items-center justify-center pt-5 gap-4  md:flex-row md:justify-evenly  md:mr-10">
-        <div>
-          <Link to="/">
-            <h1 className="font-aclonica text-4xl text-white">Kalla kendra</h1>
-          </Link>
+        <div className='relative z-10 '>
+         <Link to='/'> <Logo1/></Link>
         </div>
+
+
+
         <div className="flex gap-6">
           <div>
             <NavLink

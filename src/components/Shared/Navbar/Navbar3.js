@@ -1,70 +1,50 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Frame6 from '../../../Assets/Frame6.png'
-import KallaKendra from '../../../Assets/KallaKendra.png'
-import Polygon10 from '../../../Assets/Polygon10.png'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import Logo1 from "../../../Assets/svg/Logo1";
 
 const Navbar3 = () => {
-    return (
-        <div className='bg-[#A42725] flex items-center'>
-            <div className='flex items-center pl-4'>
-                <div>
-                    <img src={Frame6} alt="" />
-                </div>
-                <div>
-                    <img src={KallaKendra} alt="" />
-                </div>
-            </div>
-            <div className='flex'>
-                <NavLink to="/discover">
-                    {({ isActive }) => (
-                        <span
-                            className={
-                                isActive
-                                    ? "flex bg-[#9B2322]  my-4 px-6 p-2 duration-300 transition cursor-pointer rounded-3xl shadow-md text-white bg-custom-cyan-100"
-                                    : "hover:bg-custom-cyan-100 bg-custom-gray flex text-white my-4 px-6 p-2 pl-16"
-                            }
-                        >
-                            <span>Discover</span>
-                        </span>
-                    )}
-                </NavLink>
-                <NavLink to="/livestreams">
-                    {({ isActive }) => (
-                        <span
-                            className={
-                                isActive
-                                    ? "flex bg-[#9B2322]  my-4 px-6 p-2 duration-300 transition cursor-pointer rounded-3xl shadow-md text-white bg-custom-cyan-100 font-semibold"
-                                    : "hover:bg-custom-cyan-100 bg-custom-gray flex  my-4 px-6 p-2"
-                            }
-                        >
-                            <span>Livestreams</span>
-                        </span>
-                    )}
-                </NavLink>
-                <NavLink to="/jobs">
-                    {({ isActive }) => (
-                        <span
-                            className={
-                                isActive
-                                    ? "flex bg-[#9B2322]  my-4 px-6 p-2 duration-300 transition cursor-pointer rounded-3xl shadow-md text-white bg-custom-cyan-100"
-                                    : "hover:bg-custom-cyan-100 bg-custom-gray flex text-white my-4 px-6 p-2"
-                            }
-                        >
-                            <div className='flex items-center gap-2 '>
-                                <div>
-                                    <span>Jobs</span>
-                                </div>
-                                <div>
-                                    <img className='pt-1' src={Polygon10} alt="" />
-                                </div>
-                            </div>
-                        </span>
-                    )}
-                </NavLink>
-            </div>
+  const activeLink =
+    "text-black font-bold bg-aquaHaze  shadow-2xl rounded-full px-3 py-2";
+  const normalLink = "font-bold text-white";
+  return (
+    <>
+     <div className="bg-vividAuburn flex  items-center justify-around">
+        
+        <div className="relative z-10">
+          <Link to="/">
+           
+            <Logo1 />
+          </Link>
         </div>
-    );
+        <div className="flex gap-6">
+          <div>
+            <NavLink
+              to="/discover"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              Discover
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              to="/livestreams"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              Livestreams
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              to="/jobs"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              Jobs
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Navbar3;
