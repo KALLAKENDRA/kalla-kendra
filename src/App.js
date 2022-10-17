@@ -11,6 +11,7 @@ import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import StartYourJourny from './components/StartYourJourny/StartYourJourny';
 import Upload from './components/Upload/Upload';
+import UploadPhoto from './components/UploadPhoto/UploadPhoto';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path='/livestreams' element={<Livestreams />}></Route>
         <Route path='/jobs' element={<ImageInfo />}></Route>
         <Route path='/forgotPass' element={<ForgotPassword />}></Route>
-        <Route path='/uploadphoto' element={<Upload />}></Route>
+        <Route path='/uploadphoto' element={<UploadPhoto/>}></Route>
       </Routes>
 
     </div>
