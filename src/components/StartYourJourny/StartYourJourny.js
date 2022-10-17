@@ -11,7 +11,7 @@ const StartYourJourny = () => {
   return (
     <>
       <div className="top-0 absolute bg-cover">
-        <img className=" w-screen h-screen md:h-" src={bghome} alt="" />
+        <img className=" w-screen h-720 md:h-" src={bghome} alt="" />
         <img
           className="w-60  flex absolute right-0 top-0 "
           src={startjourneyp2}
@@ -50,8 +50,8 @@ const StartYourJourny = () => {
       {/* search end  */}
 
 
-      <div className="relative z-10 flex  items-center justify-evenly gap-3 lg:mt-64 flex-col lg:flex-row   mt-10">
-        <div className="w-72 ">
+      <div className="relative z-10 flex  items-center justify-evenly gap-6  mt-24 px-10">
+        <div className="w-auto">
           <h2 className="text-5xl text-white pb-14 md:pb-4 md:-mt-5 font-acme">KALLA KENDRA</h2>
           <p className="text-cloudyGrey text-base pb-12">
             Immodest and attractive is easy. Modest and repulsive is easy too.
@@ -63,7 +63,7 @@ const StartYourJourny = () => {
             </button>
           </Link>
         </div>
-        <div className="w-72 md:w-100 lg:w-108">
+        <div className="w-auto">
           <img src={bgStart} alt="" />
         </div>
       </div>
