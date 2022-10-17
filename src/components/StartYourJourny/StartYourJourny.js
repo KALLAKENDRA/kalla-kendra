@@ -4,7 +4,8 @@ import bghome from "../../Assets/bghome.png";
 import bgStart from "../../Assets/bgStart.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
-import Logo1 from '../../Assets/SVG/Logo1';
+import Logo1 from '../../Assets/svg/Logo1';
+
 
 const StartYourJourny = () => {
   return (
