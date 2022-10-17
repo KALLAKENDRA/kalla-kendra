@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import bghome from "../../Assets/bghome.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
@@ -41,11 +40,11 @@ const Upload = () => {
             </div>
 
             <div className="flex items-center justify-center ">
-              <Link className="btn border-none   w-40 h-12 bg-white text-rosewood text-base hover:bg-azure hover:text-white mt-28 rounded-2xl" to='/uploadphoto'>
+              <div className="btn border-none   w-40 h-12 bg-white text-rosewood text-base hover:bg-azure hover:text-white mt-28 rounded-2xl" >
               <button>
                 Upload
               </button>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
