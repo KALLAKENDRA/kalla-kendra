@@ -4,7 +4,7 @@ import bghome from "../../Assets/bghome.png";
 import bgStart from "../../Assets/bgStart.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
-import Logo1 from '../../Assets/svg/Logo1';
+import Logo1 from '../../Assets/SVG/Logo1';
 
 const StartYourJourny = () => {
   return (
@@ -47,6 +47,7 @@ const StartYourJourny = () => {
       </div>
 
       {/* search end  */}
+
 
       <div className="relative z-10 flex  items-center justify-evenly gap-3 lg:mt-64 flex-col lg:flex-row   mt-10">
         <div className="w-72 ">

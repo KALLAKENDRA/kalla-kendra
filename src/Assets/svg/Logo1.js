@@ -1,6 +1,6 @@
 import React from "react";
 
-const logo1 = () => {
+const Logo1 = () => {
   return (
     <>
       <div className='flex flex-col items-center justify-center text-white '>
@@ -31,4 +31,4 @@ const logo1 = () => {
   );
 };
 
-export default logo1;
+export default Logo1;
