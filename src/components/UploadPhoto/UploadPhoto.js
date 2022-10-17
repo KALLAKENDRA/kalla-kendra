@@ -2,21 +2,15 @@ import React from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import Navbar2 from "../Shared/Navbar/Navbar2";
 
-import modernArt1 from "../../Assets/modern-art/modern3.jpg";
-import modernArt2 from "../../Assets/modern-art/traditional2.jpg";
-import modernArt3 from "../../Assets/modern-art/graphic.jpg";
-import modernArt4 from "../../Assets/modern-art/ui-ux.jpg";
-import modernArt5 from "../../Assets/modern-art/singing.jpg";
-import modernArt6 from "../../Assets/modern-art/danching2.jpg"
 import Card from "../Card/Card";
 
 const cardList = [
-  { id: 1, name: "Modern art", img: modernArt1, button: "View" },
-  { id: 2, name: "Traditional art", img: modernArt2, button: "View" },
-  { id: 3, name: "Graphic Designer", img: modernArt3, button: "Follow" },
-  { id: 4, name: "UI/UX Designer", img: modernArt4, button: "Follow" },
-  { id: 5, name: "Singing", img: modernArt5, button: "Follow" },
-  { id: 6, name: "Dancing", img: modernArt6, button: "Follow" },
+  { id: 1, name: "Modern art", img: 'https://i.ibb.co/Rj2zX19/modern3.jpg', button: "View" },
+  { id: 2, name: "Traditional art", img: 'https://i.ibb.co/3T6YWqk/traditional2.jpg', button: "View" },
+  { id: 3, name: "Graphic Designer", img: 'https://i.ibb.co/Ns7y173/graphic.jpg', button: "Follow" },
+  { id: 4, name: "UI/UX Designer", img: 'https://i.ibb.co/xfQKmZ7/ui-ux.jpg', button: "Follow" },
+  { id: 5, name: "Singing", img: 'https://i.ibb.co/kK70BBV/singing.jpg', button: "Follow" },
+  { id: 6, name: "Dancing", img: 'https://i.ibb.co/RzQJLcv/danching2.jpg', button: "Follow" },
 ];
 
 const UploadPhoto = () => {
