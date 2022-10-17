@@ -60,12 +60,12 @@ const artList = [
     button: "Follow",
   },
 ];
-
+//  ................... 
 const Discover = () => {
   return (
     <>
       <div>
-        <div className="relative z-8 bg-vividAuburn">
+        <div className="relative z-8  bg-vividAuburn">
           <Navbar />
         </div>
         <Navbar2 />
