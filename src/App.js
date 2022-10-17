@@ -12,6 +12,7 @@ import SignUp from './components/SignUp/SignUp';
 import StartYourJourny from './components/StartYourJourny/StartYourJourny';
 import Upload from './components/Upload/Upload';
 import UploadPhoto from './components/UploadPhoto/UploadPhoto';
+import ViewDesignPage from './components/ViewDesignPage/ViewDesignPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/startyourjourny' element={<StartYourJourny />}></Route>
         <Route path='/discover' element={<Discover />}></Route>
+        <Route path='/discover/modern-art' element={<ViewDesignPage />}></Route>
         <Route path='/createresume' element={<CreateResume />}></Route>
         <Route path='/upload' element={<Upload />}></Route>
         <Route path='/livestreams' element={<Livestreams />}></Route>
