@@ -19,7 +19,7 @@ const Home = () => {
         </div>
 
         <div className="top-0 absolute bg-cover">
-          <img className="w-screen h-720" src={bghome} alt="" />
+          <img className="w-screen h-640" src={bghome} alt="" />
         </div>
 
         <div className="flex -mt-10">
@@ -31,28 +31,28 @@ const Home = () => {
           </div>
         </div>
 
-       <div className="flex flex-col -mt-96">
-          <div className="relative z-10 ">
+       <div className="flex flex-col -mt-52">
+          <div className="relative  ">
             <div>
-              <h1 className="text-3xl md:text-6xl   text-white font-acme -mt-16">
+              <h1 className="text-3xl md:text-6xl md:-mt-56   text-white font-acme -mt-16 ">
                 Welcome! to kalla kendra
               </h1>
             </div>
             <div>
               <Link to="/startyourjourny">
-                <button className="w-60 h-16 bg-lightRose rounded-full mt-9 text-iridium text-2xl font-aclonica hover:bg-yellow">
+                <button className="w-40 h-10 bg-lightRose rounded-full mt-9 text-iridium text-base font-aclonica hover:bg-yellow">
                   World of Artist
                 </button>
               </Link>
             </div>
           </div>
 
-          <div className="relative z-10 flex flex-row justify-evenly mt-20 h-80">
-            <img src={speaker1} alt="speaker" />
-            <img src={guitarist1} alt="guitarist" />
-            <img src={Painter1} alt="painter" />
-            <img src={photographer1} alt="photographer" />
-            <img src={Singer1} alt="singer" />
+          <div className="relative w-screen z-10 flex flex-row items-center laptop:items-center justify-evenly laptop:-mt-14 tablet:-mt-6    mt-10 h-60">
+            <div><img className="laptop:h-60" src={speaker1} alt="speaker" /></div>
+            <div><img className="laptop:h-60"  src={guitarist1} alt="guitarist" /></div>
+            <div><img className="laptop:h-60"  src={Painter1} alt="painter" /></div>
+            <div><img className="laptop:h-60"  src={photographer1} alt="photographer" /></div>
+            <div><img className="laptop:h-60"  src={Singer1} alt="singer" /></div>
           </div>
         </div>
       </div>
