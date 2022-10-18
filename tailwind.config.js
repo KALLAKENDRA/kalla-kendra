@@ -31,7 +31,8 @@ module.exports = {
         200: "90rem",
       },
       height:{
-        640: "40rem"
+        640: "40rem",
+        1440: "90rem"
       },
       fontFamily: {
         acme: ["Acme", "sans-serif"],
