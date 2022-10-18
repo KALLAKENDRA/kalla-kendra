@@ -2,12 +2,17 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+   
     extend: {
       spacing:{
         '100':'30rem'
       },
-      screens: {
-        'lg-md':{'min': '1024px', 'max': '1150px'},
+      screens:{
+        'mobile': '640px',
+        'tablet': '640px',
+        'laptop': '1024px',
+        'desktop': '1440px',
+  
       },
 
       width: {
@@ -26,7 +31,7 @@ module.exports = {
         200: "90rem",
       },
       height:{
-        720: "45rem"
+        640: "40rem"
       },
       fontFamily: {
         acme: ["Acme", "sans-serif"],
