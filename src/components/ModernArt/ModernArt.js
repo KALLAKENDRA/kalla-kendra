@@ -1,5 +1,6 @@
 import React from "react";
-import { FaRegThumbsUp,  FaRegEye } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+// import { FaRegThumbsUp,  FaRegEye } from 'react-icons/fa';
 
 const ModernArt = ({ art }) => {
   const { img, button, name, personName, inspect, like } = art;
@@ -14,13 +15,13 @@ const ModernArt = ({ art }) => {
           <div className="flex">
             <div className="flex">
               <button className="mt-1 text-white">
-              <FaRegThumbsUp/>
+              {/* <FaRegThumbsUp/> */}
               </button>
               <p className="ml-2 mt-2 font-light text-sm text-white">{like}</p>
             </div>
             <div className="flex ml-2">
               <button className="mt-1 ml-2 text-white">
-              <FaRegEye/>
+              {/* <FaRegEye/> */}
               </button>
               <p className="ml-2 mt-2 font-light text-sm text-white">{inspect}</p>
             </div>
@@ -33,7 +34,7 @@ const ModernArt = ({ art }) => {
               className=" w-8 rounded-full"
               src="https://placeimg.com/80/80/people"
             />
-            <h3 className="text-white ml-5">{personName}</h3>
+            <h3 className="text-white ml-5"><Link to='/viewdesignpage'>{personName}</Link></h3>
           </div>
           <div className="flex">
             <button className=" bg-lightRose text-black px-8 h-8 rounded-2xl">

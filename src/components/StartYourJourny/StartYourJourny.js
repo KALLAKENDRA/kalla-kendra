@@ -6,11 +6,12 @@ import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
 import Logo1 from '../../Assets/svg/Logo1';
 
+
 const StartYourJourny = () => {
   return (
     <>
       <div className="top-0 absolute bg-cover">
-        <img className=" w-screen h-screen md:h-" src={bghome} alt="" />
+        <img className=" w-screen h-640 md:h-" src={bghome} alt="" />
         <img
           className="w-60  flex absolute right-0 top-0 "
           src={startjourneyp2}
@@ -48,10 +49,11 @@ const StartYourJourny = () => {
 
       {/* search end  */}
 
-      <div className="relative z-10 flex  items-center justify-evenly gap-3 lg:mt-64 flex-col lg:flex-row   mt-10">
-        <div className="w-72 ">
-          <h2 className="text-5xl text-white pb-14 md:pb-4 md:-mt-5 font-acme">KALLA KENDRA</h2>
-          <p className="text-cloudyGrey text-base pb-12">
+
+      <div className="relative z-10 flex flex-col tablet:flex-row items-center justify-evenly gap-6  mt-24 px-10">
+        <div className="-mt-20 flex flex-col tablet:flex tablet:flex-col gap-4 items-center justify-center tablet:w-60 tablet:mt-1 laptop:w-80 desktop:w-fit">
+          <h2 className="text-2xl w-52 text-white pb-1 text-center  font-acme">KALLA KENDRA</h2>
+          <p className="text-cloudyGrey text-base desktop:w-96 pb-1">
             Immodest and attractive is easy. Modest and repulsive is easy too.
             But modest and attractive is an art.
           </p>
@@ -61,7 +63,7 @@ const StartYourJourny = () => {
             </button>
           </Link>
         </div>
-        <div className="w-72 md:w-100 lg:w-108">
+        <div className="w-52 tablet:w-80 laptop:w-80 desktop:w-96">
           <img src={bgStart} alt="" />
         </div>
       </div>
