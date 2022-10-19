@@ -4,6 +4,7 @@ import CreateResume from './components/CreateResume/CreateResume';
 import Discover from './components/Discover/Discover';
 import Home from './components/Home/Home';
 import ImageInfo from './components/ImageInfo/ImageInfo';
+import Jobs from './components/Jobs/Jobs';
 import Livestreams from './components/Livestreams/Livestreams';
 import ForgotPassword from './components/Login/ForgotPassword/ForgotPassword';
 import Login from './components/Login/Login';
@@ -28,10 +29,10 @@ function App() {
         <Route path='/createresume' element={<CreateResume />}></Route>
         <Route path='/upload' element={<Upload />}></Route>
         <Route path='/livestreams' element={<Livestreams />}></Route>
-        <Route path='/jobs' element={<ImageInfo />}></Route>
+        <Route path='/jobs' element={<Jobs />}></Route>
         <Route path='/forgotPass' element={<ForgotPassword />}></Route>
-        <Route path='/uploadphoto' element={<UploadPhoto/>}></Route>
-        <Route path='/viewdesignpage' element={<ViewDesignPage/>}></Route>
+        <Route path='/uploadphoto' element={<UploadPhoto />}></Route>
+        <Route path='/viewdesignpage' element={<ViewDesignPage />}></Route>
       </Routes>
 
     </div>
