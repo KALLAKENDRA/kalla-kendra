@@ -1,6 +1,6 @@
 import React from 'react';
-// import { BiDislike, BiLike } from 'react-icons/bi';
-// import { FaUserFriends } from 'react-icons/fa';
+import { BiDislike, BiLike } from 'react-icons/bi';
+import { FaUserFriends } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Livestrimcover from '../../Assets/Livestrimcover.jpg';
 import cardImg1 from '../../Assets/Rectangle3467593.png';
@@ -29,15 +29,15 @@ const Livestreams = () => {
             </p>
             <div className='flex pt-10 gap-12 text-white'>
               <div className='flex items-center text-lg gap-2'>
-                {/* <FaUserFriends /> */}
+                <FaUserFriends />
                 <p>15K</p>
               </div>
               <div className='flex items-center text-lg gap-2'>
-                {/* <BiLike /> */}
+                <BiLike />
                 <p>5K</p>
               </div>
               <div className='flex items-center text-lg gap-2'>
-                {/* <BiDislike /> */}
+                <BiDislike />
                 <p>2</p>
               </div>
             </div>

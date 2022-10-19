@@ -8,11 +8,15 @@ module.exports = {
         '100':'30rem'
       },
       screens:{
-        'mobile': '640px',
-        'tablet': '640px',
-        'laptop': '1024px',
-        'desktop': '1440px',
-  
+        'mobileMd': '375px',
+        'mobileLg': '425px',
+        'tablet': '768px',
+        'laptopSm': '800px',
+        'laptopMd': '1024px',
+        'laptopLg': '1280px',
+        'desktopSm': '1366px',
+        'desktopMd': '1440px',
+        'desktopLg': '1920px',
       },
 
       width: {
@@ -31,7 +35,9 @@ module.exports = {
         200: "90rem",
       },
       height:{
-        640: "40rem"
+        600:"37.5rem",
+        640: "40rem",
+        1440: "90rem"
       },
       fontFamily: {
         acme: ["Acme", "sans-serif"],
