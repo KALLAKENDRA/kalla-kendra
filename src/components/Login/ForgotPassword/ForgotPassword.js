@@ -16,12 +16,12 @@ const ForgotPassword = () => {
                 <img className="w-60 absolute bottom-0 right-0 " src={bgCorner1} alt="" />
             </div>
             <div className="flex justify-center items-center h-screen">
-                <div className="card bg-lightGrey bg-opacity-25 desktopSm:w-2/4 desktopMd:w-2/4 desktopLg:w-2/4 tablet:w-2/4  h-1/2 flex flex-col items-center justify-center">
-                    <div>
+                <div className="card bg-lightGrey bg-opacity-25  w-full desktopSm:w-2/4 desktopMd:w-2/4 desktopLg:w-2/4 tablet:w-3/4 mobileLg:w-full mobileMd:w-full h-full desktopSm:h-1/2 desktopMd:h-1/2 desktopLg:h-1/2 laptopSm:h-4/5 laptopMd:h-4/5 laptopLg:h-4/5 tablet:h-4/5  mobileMd:h-full mobileLg:h-full  flex flex-col items-center justify-center">
+                    <div >
 
                         <form className='flex flex-col items-center justify-center' >
 
-                            <div className="form-control mt-12">
+                            <div className="form-control mt-6">
                                 <label className="label">
                                     <span className="label-text text-base font-bold text-white">Email</span>
 
@@ -29,7 +29,7 @@ const ForgotPassword = () => {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 bg-opacity-10"
+                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96  bg-opacity-10"
 
                                 />
                             </div>
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
                                 <input
                                     type="password"
                                     placeholder="Enter your password"
-                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 mb-6 bg-opacity-10"
+                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 bg-opacity-10"
 
                                 />
 
