@@ -12,12 +12,12 @@ const cardList = [
   { id: 5, name: "Singing", img: 'https://i.ibb.co/kK70BBV/singing.jpg', button: "Follow" },
   { id: 6, name: "Dancing", img: 'https://i.ibb.co/RzQJLcv/danching2.jpg', button: "Follow" },
 ];
-
+//  ................... 
 const Discover = () => {
   return (
     <>
       <div>
-        <div className="relative z-8 bg-vividAuburn">
+        <div className="relative z-8  bg-vividAuburn">
           <Navbar />
         </div>
         <Navbar2 />

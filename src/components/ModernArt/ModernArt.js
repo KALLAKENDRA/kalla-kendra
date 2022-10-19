@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { FaRegThumbsUp,  FaRegEye } from 'react-icons/fa';
 
 const ModernArt = ({ art }) => {
@@ -33,7 +34,7 @@ const ModernArt = ({ art }) => {
               className=" w-8 rounded-full"
               src="https://placeimg.com/80/80/people"
             />
-            <h3 className="text-white ml-5">{personName}</h3>
+            <h3 className="text-white ml-5"><Link to='/viewdesignpage'>{personName}</Link></h3>
           </div>
           <div className="flex items-center">
             <button className=" bg-lightRose text-black px-8 h-8 rounded-2xl">

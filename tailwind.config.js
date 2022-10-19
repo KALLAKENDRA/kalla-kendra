@@ -2,12 +2,21 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+   
     extend: {
       spacing:{
         '100':'30rem'
       },
-      screens: {
-        'lg-md':{'min': '1024px', 'max': '1150px'},
+      screens:{
+        'mobileMd': '375px',
+        'mobileLg': '425px',
+        'tablet': '768px',
+        'laptopSm': '800px',
+        'laptopMd': '1024px',
+        'laptopLg': '1280px',
+        'desktopSm': '1366px',
+        'desktopMd': '1440px',
+        'desktopLg': '1920px',
       },
 
       width: {
@@ -24,6 +33,11 @@ module.exports = {
         116: "46rem",
         118: "48rem",
         200: "90rem",
+      },
+      height:{
+        600:"37.5rem",
+        640: "40rem",
+        1440: "90rem"
       },
       fontFamily: {
         acme: ["Acme", "sans-serif"],
@@ -48,6 +62,8 @@ module.exports = {
       aquaHaze: '#F3F3F3',
       osloGrey: '#8D8D8D',
       radial: "#8D0301",
+      reedwood: "#9B2322",
+      greenWhite: "#E8E8E8",
     },
   },
   plugins: [require("daisyui")],
