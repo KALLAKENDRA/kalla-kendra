@@ -1,6 +1,7 @@
 import React from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
+import Navbar3 from "../Shared/Navbar/Navbar3";
 import JobNav from "./JobNav";
 
 
@@ -14,38 +15,40 @@ const Jobs = () => {
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
       <div className="relative bg-vividAuburn">
-        <JobNav></JobNav>
+
+        <Navbar3></Navbar3>
+
       </div>
 
-      <div className="relative flex items-center justify-around mt-6">
-        <div class="btn-group mx-6">
+      <div className="relative flex items-center justify-around  mt-6 ">
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
           <button class="btn  bg-darkRed">Part Time</button>
           <button class="btn bg-darkRed">full Time</button>
           <button class="btn bg-vividAuburn">Internship</button>
         </div>
-        <div class="btn-group mx-6">
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
           <button class="btn bg-darkRed">
-            {" "}
+
             Location{" "}
             <img className="text-white ml-2" src={locationIcon} alt="" />
           </button>
         </div>
-        <div class="btn-group mx-6">
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
           <button class="btn bg-vividAuburn">Remote</button>
           <button class="btn bg-darkRed">In Office</button>
         </div>
-        <div class="btn-group mx-6">
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
           <button class="btn bg-darkRed">Keywords</button>
         </div>
-        <div class="btn-group mx-6">
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
           <button class="btn bg-darkRed">
-            {" "}
-            Search <img className="text-white ml-2" src={searchIcon} alt="" />
+
+            Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
           </button>
         </div>
       </div>
 
-      <div className="relative flex items-center justify-around mt-12">
+      <div className="relative flex mobileLg:flex-col items-center justify-around mt-12">
         <div className="bg-white p-24 font-semibold">
           <div className=" flex items-center justify-start pb-4">
             <input type="checkbox" class="checkbox bg-lightGrey mr-2" />

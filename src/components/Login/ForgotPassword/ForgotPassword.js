@@ -1,53 +1,77 @@
 import React from 'react';
-import './ForgotPassword.css'
+
+import bgCorner1 from "../../../Assets/bgCorner1.png";
+import bgCorner2 from "../../../Assets/bgCorner2.png";
+import bghome from "../../../Assets/bghome.png";
+import Navbar3 from '../../Shared/Navbar/Navbar3';
 const ForgotPassword = () => {
     return (
-        <div className='background relative' >
-            <div class="hero min-h-screen">
-                <div class="hero-content flex-col lg:flex-row-reverse">
+        <>
+            <div className='relative'>
+                <Navbar3></Navbar3>
+            </div>
+            <div className="absolute bg-cover">
+                <img className="w-screen h-screen" src={bghome} alt="" />
+                <img className="w-60  flex absolute left-0 top-0" src={bgCorner2} alt="" />
+                <img className="w-60 absolute bottom-0 right-0 " src={bgCorner1} alt="" />
+            </div>
+            <div className="flex justify-center items-center h-screen">
+                <div className="card bg-lightGrey bg-opacity-25  w-full desktopSm:w-2/4 desktopMd:w-2/4 desktopLg:w-2/4 tablet:w-3/4 mobileLg:w-full mobileMd:w-full h-full desktopSm:h-1/2 desktopMd:h-1/2 desktopLg:h-1/2 laptopSm:h-4/5 laptopMd:h-4/5 laptopLg:h-4/5 tablet:h-4/5  mobileMd:h-full mobileLg:h-full  flex flex-col items-center justify-center">
+                    <div >
 
-                    <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl items=center justify-center forgot-pass-portion text-white">
-                        <div class="card-body w-full bg-opacity-25 ">
+                        <form className='flex flex-col items-center justify-center' >
 
+                            <div className="form-control mt-6">
+                                <label className="label">
+                                    <span className="label-text text-base font-bold text-white">Email</span>
 
-                            <div class="form-control pt-12">
-                                <label class="label">
-                                    <span class="label-text text-white">Email</span>
                                 </label>
-                                <input type="text" class="input input-bordered input-field bg-opacity-10 px-24" />
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96  bg-opacity-10"
 
+                                />
                             </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text text-white">Password</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-base pt-3 font-bold text-white">Password</span>
+
                                 </label>
-                                <input type="text" class="input input-bordered input-field bg-opacity-10 " />
+                                <input
+                                    type="password"
+                                    placeholder="Enter your password"
+                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 bg-opacity-10"
+
+                                />
 
                             </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text text-white">Confirm Password</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-base pt-3 font-bold text-white">Confirm Password</span>
+
                                 </label>
-                                <input type="text" class="input input-bordered input-field bg-opacity-10" />
+                                <input
+                                    type="password"
+                                    placeholder="Enter your password"
+                                    className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 bg-opacity-10"
+
+                                />
 
                             </div>
-                            <div class="form-control mt-6 pt-24 flex items-center">
-
-                                <button class="btn bg-rosewood next-btn border-0">Next</button>
 
 
-                            </div>
-                        </div>
+
+                            <input className="btn border-none w-56 bg-rosewood hover:bg-azure mt-8" type="submit" value='Next' />
+                        </form>
+
+
+
+
                     </div>
                 </div>
             </div>
-
-            <img className='forgotpass-mandela-left' src="https://i.ibb.co/nP7CWy8/leftbg.png" alt="mandela" />
-
-
-            <img className='forgotpass-mandela-right' src="https://i.ibb.co/xH7HRQJ/rightbg.png" alt="" />
-
-        </div>
+        </>
     );
 };
 
