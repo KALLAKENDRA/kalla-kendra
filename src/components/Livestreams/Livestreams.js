@@ -11,7 +11,7 @@ import Navbar3 from '../Shared/Navbar/Navbar3';
 const Livestreams = () => {
   return (
     <div>
-      <div>
+      <div className='relative bg-gradient-to-r from-[#8D0301] to-[#640000]'>
         <Navbar3 />
       </div>
       <div className='bg-gradient-to-r from-[#8D0301] to-[#640000]'>

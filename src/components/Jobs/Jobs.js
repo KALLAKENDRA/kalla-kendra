@@ -14,7 +14,7 @@ const Jobs = () => {
       <div className="top-0 absolute bg-cover">
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
-      <div className="relative bg-vividAuburn">
+      <div className="relative">
 
         <Navbar3></Navbar3>
 
