@@ -5,6 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'mobile': '640px',
+        'tablet': '640px',
+        'laptop': '1024px',
+        'desktop': '1440px',
+  
+      },
       width:{
         '53':'13.438rem',
         '100':'30rem',
