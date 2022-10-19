@@ -5,7 +5,7 @@ import mainImage from "../../Assets/Image-Info/Frist-Show.png"
 import BottomSliderInfo from './BottomSliderInfo';
 const ImageInfo = () => {
   return (
-    <div className="min-h-[100vh] py-4"
+    <div className="min-h-[100vh] sm:py-6 py-2"
       style={{
         background: `url(${bannerIamge})`,
         backgroundRepeat: "no-repeat",
@@ -13,11 +13,11 @@ const ImageInfo = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="w-11/12 mx-auto">
-        <div className="grid grid-cols-3 gap-5">
-          <div className="">
-            <div className="mb-6">
-              <img src={mainImage} alt="" className="h-[350px] w-full object-fill" />
+      <div className="md:w-11/12 w-full mx-auto">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
+          <div className="sm:flex sm:justify-center sm:items-center">
+            <div className="sm:mb-6 mx-auto sm:p-0 p-2">
+              <img src={mainImage} alt="" className="lg:w-full lg:h-full" />
               <div className="flex justify-between items-center">
                 <h5 className="font-bold font-inter  not-italic text-lg text-white text-left my-3">Mordern Art</h5>
                 <div className="flex justify-between items-center">
@@ -45,25 +45,25 @@ const ImageInfo = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 py-1 px-4">
-            <div className='w-9/12 mb-4'>
+          <div className="sm:col-span-2 py-1 px-4">
+            <div className='lg:w-9/12 w-full lg:mb-4'>
               <h1 className="font-bold font-inter not-italic text-2xl text-white text-left my-1">{imageInfoData.title}</h1>
-              <p className="font-bold font-inter  not-italic text-lg text-white text-left py-1">{imageInfoData.desciption}</p>
+              <p className="font-bold font-inter  not-italic text-lg text-white text-left py-2">{imageInfoData.desciption}</p>
             </div>
             <div>
-              <h1 className="font-bold font-inter not-italic text-xl text-white text-left my-3">More Picture</h1>
-              <div className="grid grid-cols-3 gap-5">
-                <img src={imageInfoData.imgSlide1} alt=""  className="w-full h-5/6"/>
-                <img src={imageInfoData.imgSlide2} alt="" className="w-full h-5/6" />
-                <img src={imageInfoData.imgSlide3} alt="" className="w-full h-5/6" />
+              <h1 className="font-bold font-inter not-italic text-xl text-white text-left md:my-3 my-4">More Picture</h1>
+              <div className="grid sm:grid-cols-3 gap-5">
+                <img src={imageInfoData.imgSlide1} alt=""  className="w-full  h-full"/>
+                <img src={imageInfoData.imgSlide2} alt="" className="w-full  h-full" />
+                <img src={imageInfoData.imgSlide3} alt="" className="w-full h-full" />
               </div>
-              <h1 className="flex justify-end font-bold font-inter not-italic text-4xl text-white text-left">+2</h1>
+              <h1 className="flex justify-end font-bold font-inter not-italic md text-4xl text-white text-left md:mt-1 mt-3 lg:mb-1 mb-7">+2</h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-5 gap-6">
+      <div className="container mx-auto sm:p-1 p-4 ">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
          {
           imageInfoData.bottomSliders.map((botomSlider,index) => <BottomSliderInfo
           key={index}
