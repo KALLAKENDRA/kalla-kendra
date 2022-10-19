@@ -19,7 +19,7 @@ const Home = () => {
         </div>
 
         <div className="top-0 absolute bg-cover">
-          <img className="w-screen h-640" src={bghome} alt="" />
+          <img className="w-screen h-600" src={bghome} alt="" />
         </div>
 
         <div className="flex -mt-10">
@@ -34,7 +34,7 @@ const Home = () => {
        <div className="flex flex-col -mt-52">
           <div className="relative  ">
             <div>
-              <h1 className="text-3xl md:text-6xl md:-mt-56   text-white font-acme -mt-16 ">
+              <h1 className="text-3xl mobileMd:-mt-20  text-white font-acme laptopSm:-mt-60 tablet:-mt-60">
                 Welcome! to kalla kendra
               </h1>
             </div>
@@ -47,12 +47,17 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative w-screen z-10 flex flex-row items-center laptop:items-center justify-evenly laptop:-mt-14 tablet:-mt-6    mt-10 h-60">
-            <div><img className="laptop:h-60" src={speaker1} alt="speaker" /></div>
-            <div><img className="laptop:h-60"  src={guitarist1} alt="guitarist" /></div>
-            <div><img className="laptop:h-60"  src={Painter1} alt="painter" /></div>
-            <div><img className="laptop:h-60"  src={photographer1} alt="photographer" /></div>
-            <div><img className="laptop:h-60"  src={Singer1} alt="singer" /></div>
+          <div className="relative w-screen z-10 mt-10 h-60 flex flex-row items-center tablet:-mt-16 laptopSm:-mt-16 laptopSm:ml-12 laptopSm:gap-5  laptopSm:w-116  laptopMd:w-118 laptopMd:ml-40 laptopMd:gap-5 
+          laptopLg:w-200
+          laptopLg:ml-36
+          desktopMd:ml-60
+          desktopMd:w-118
+          ">
+            <div><img className="laptopMd:h-60 laptopMd:w-52 laptopLg:w-40" src={speaker1} alt="speaker" /></div>
+            <div><img className="laptopMd:h-60 laptopMd:w-60 laptopLg:w-52"  src={guitarist1} alt="guitarist" /></div>
+            <div><img className="laptopMd:h-60 laptopMd:w-60 laptopLg:w-52"  src={Painter1} alt="painter" /></div>
+            <div><img className="laptopMd:h-60 laptopMd:w-52 laptopLg:w-36"  src={photographer1} alt="photographer" /></div>
+            <div><img className="laptopMd:h-60 laptopMd:w-60"  src={Singer1} alt="singer" /></div>
           </div>
         </div>
       </div>
