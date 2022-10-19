@@ -39,11 +39,14 @@ const Upload = () => {
               </ul>
             </div>
 
-            <div className="flex items-center justify-center ">
-              <button className="btn border-none   w-40 h-12 bg-white text-rosewood text-base hover:bg-azure hover:text-white mt-28 rounded-2xl">
-                Upload
-              </button>
-            </div>
+           
+              <div className="mt-28">
+                <label for="files" className="btn w-40 rounded-2xl bg-greenWhite text-darkRed hover:bg-yellow border-none">
+                  Upload
+                </label>
+                <input id="files" className="hidden" type="file" />
+              </div>
+            
           </div>
         </div>
       </div>

@@ -13,8 +13,8 @@ const CreateResume = () => {
   };
   return (
     <>
-      <div className="top-0 absolute bg-cover">
-        <img className="w-screen h-screen" src={bghome} alt="" />
+      <div className="top-0 absolute  ">
+        <img className="h-1440" src={bghome} alt="" />
         <img
           className="w-60  flex absolute left-0 top-0"
           src={bgCorner2}
@@ -26,10 +26,13 @@ const CreateResume = () => {
           alt=""
         />
       </div>
-      <div className="flex justify-center items-center h-screen">
-        <div className="card bg-lightGrey bg-opacity-25 px-10 w-109">
+      <div className=" flex flex-col items-center justify-center">
+
+
+
+        <div className="card bg-lightGrey bg-opacity-25 w-60 mt-9 ">
           <div>
-            <h2 className="text-2xl font-aclonica pt-14 pb-14 text-left pl-12 text-white">
+            <h2 className="text-xl font-aclonica text-left text-white pt-4 pl-4">
               Create a resume
             </h2>
             <form
@@ -38,14 +41,14 @@ const CreateResume = () => {
             >
               {/* name start  */}
 
-              <div className="flex  gap-4">
+              <div className="flex flex-col">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">First Name</span>
                   </label>
                   <input
                     type="text"
-                    className="input h-7 w-53 bg-opacity-10 rounded-md"
+                    className="input h-7 bg-opacity-10 rounded-md"
                     {...register("firstName", {
                       required: {
                         value: true,
@@ -61,7 +64,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="text"
-                    className="input h-7 w-53 bg-opacity-10 rounded-md"
+                    className="input h-7 bg-opacity-10 rounded-md"
                     {...register("middleName", {
                       required: {
                         value: true,
@@ -77,7 +80,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="text"
-                    className="input h-7 w-53 bg-opacity-10 rounded-md"
+                    className="input h-7 bg-opacity-10 rounded-md"
                     {...register("lastName", {
                       required: {
                         value: true,
@@ -98,7 +101,7 @@ const CreateResume = () => {
                 </label>
                 <input
                   type="email"
-                  className="input w-113 h-7 bg-opacity-10 rounded-md"
+                  className="input  h-7 bg-opacity-10 rounded-md"
                   {...register("email", {
                     required: {
                       value: true,
@@ -116,14 +119,15 @@ const CreateResume = () => {
 
               {/* phone start  */}
 
-              <div className="flex justify-evenly gap-9">
-                <div className="form-control">
+              <div className="justify-evenly  flex flex-col">
+                <div className="form-control ">
                   <label className="label">
                     <span className=" text-base text-white">Ph no.</span>
                   </label>
                   <input
                     type="number"
-                    className="input w-80 h-7  bg-opacity-10 rounded-md"
+                    className="input w-53   h-7 bg-opacity-10 rounded-md"
+                    
                     {...register("phNumber", {
                       required: {
                         value: true,
@@ -141,7 +145,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="number"
-                    className="input w-80 h-7 bg-opacity-10 rounded-md"
+                    className="input w-53 h-7 bg-opacity-10 rounded-md"
                     {...register("altPhNumber", {
                       required: {
                         value: true,
@@ -156,11 +160,11 @@ const CreateResume = () => {
 
               {/* location input start  */}
 
-              <div className="form-control">
+              <div className="form-control w-53">
                 <label className="label">
                   <span className=" text-base text-white">Location</span>
                 </label>
-                <select className=" bg-white bg-opacity-10  w-113 h-7 rounded-md">
+                <select className=" bg-white bg-opacity-10   h-7 rounded-md">
                   <option disabled selected></option>
                   <option>India</option>
                   <option>USA</option>
@@ -171,7 +175,7 @@ const CreateResume = () => {
 
               {/* qualification, Board, University input start  */}
 
-              <div className="flex gap-4">
+              <div className="flex flex-col">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">Qualification</span>
@@ -219,14 +223,14 @@ const CreateResume = () => {
 
               {/* age gender input start   */}
 
-              <div className="flex gap-9">
+              <div className="flex flex-col">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">Age</span>
                   </label>
                   <input
                     type="number"
-                    className="input bg-white bg-opacity-10  w-80 h-7 rounded-md "
+                    className="input bg-white bg-opacity-10  w-53 h-7 rounded-md "
                     {...register("number", {
                       required: {
                         value: true,
@@ -239,7 +243,7 @@ const CreateResume = () => {
                   <label className="label">
                     <span className=" text-base text-white">Sex</span>
                   </label>
-                  <select className="input bg-white bg-opacity-10  w-80 h-7 rounded-md">
+                  <select className="input bg-white bg-opacity-10  w-53 h-7 rounded-md">
                     <option disabled selected></option>
                     <option>Male</option>
                     <option>Female</option>
@@ -252,14 +256,14 @@ const CreateResume = () => {
 
               {/* application , occupation input start   */}
 
-              <div className="flex gap-9">
+              <div className="flex flex-col">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">
                       Application type
                     </span>
                   </label>
-                  <select className="input bg-white bg-opacity-10  w-80 h-7 rounded-md">
+                  <select className="input bg-white bg-opacity-10  w-53 h-7 rounded-md">
                     <option disabled selected></option>
                     <option>Internship</option>
                     <option>Contract</option>
@@ -270,7 +274,7 @@ const CreateResume = () => {
                   <label className="label">
                     <span className=" text-base text-white">Occupation</span>
                   </label>
-                  <select className="input bg-white bg-opacity-10  w-80 h-7 rounded-md">
+                  <select className="input bg-white bg-opacity-10  w-53 h-7 rounded-md">
                     <option disabled selected></option>
                     <option>Student</option>
                     <option>Engineer</option>
@@ -283,12 +287,12 @@ const CreateResume = () => {
 
               {/* job type, year of exp input start   */}
 
-              <div className="flex gap-9">
+              <div className="flex flex-col">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">Job type</span>
                   </label>
-                  <select className="input bg-white bg-opacity-10  w-80 h-7 rounded-md">
+                  <select className="input bg-white bg-opacity-10  w-53 h-7 rounded-md">
                     <option disabled selected></option>
                     <option>Front End Developer</option>
                     <option>Backend Developer</option>
@@ -304,7 +308,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="number"
-                    className="input w-80 h-7  bg-opacity-10 rounded-md"
+                    className="input w-53 h-7  bg-opacity-10 rounded-md"
                     {...register("number", {
                       required: {
                         value: true,
@@ -333,6 +337,10 @@ const CreateResume = () => {
             </form>
           </div>
         </div>
+
+
+
+
       </div>
     </>
   );

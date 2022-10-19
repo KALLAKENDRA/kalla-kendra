@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+   
     extend: {
+      spacing:{
+        '100':'30rem'
+      },
       screens:{
         'mobile': '640px',
         'tablet': '640px',
@@ -26,31 +28,37 @@ module.exports = {
         '116':'46rem',
         '118':'48rem',
       },
-      fontFamily: {
-        acme:['Acme', 'sans-serif'],
-        aclonica:['Aclonica', 'sans-serif'],
-        roboto:['Roboto', 'sans-serif'],
-        inter:['Inter', 'sans-serif'],
-      }
+      height:{
+        640: "40rem",
+        1440: "90rem"
 
+      },
+      fontFamily: {
+        acme: ["Acme", "sans-serif"],
+        aclonica: ["Aclonica", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
-    colors:{
-      lightRose:'#FFC7C7',
-      iridium:'#3A3A3A',
-      white:'#FFFFFF',
-      lightGrey:'#d9d9d9',
-      rosewood:'#630000',
-      azure:'#00A3F5',
-      vividGreen:'#35F500',
-      cloudyGrey:'#746767',
-      black:'#000000',
-      yellow:'#E5BE02',
-      vividAuburn:'#9B2322',
-      monsoon:'#888888',
-      aquaHaze:'#F3F3F3',
-      osloGrey:'#8D8D8D',
-     
+    colors: {
+      lightRose: '#FFC7C7',
+      iridium: '#3A3A3A',
+      white: '#FFFFFF',
+      lightGrey: '#d9d9d9',
+      rosewood: '#630000',
+      azure: '#00A3F5',
+      vividGreen: '#35F500',
+      cloudyGrey: '#746767',
+      black: '#000000',
+      yellow: '#E5BE02',
+      vividAuburn: '#9B2322',
+      darkRed: '#7F1211',
+      monsoon: '#888888',
+      aquaHaze: '#F3F3F3',
+      osloGrey: '#8D8D8D',
+      radial: "#8D0301",
+      reedwood: "#9B2322",
+      greenWhite: "#E8E8E8",
     },
   },
   plugins: [require("daisyui")],
-}
+};
