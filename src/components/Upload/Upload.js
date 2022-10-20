@@ -3,15 +3,15 @@ import React from "react";
 import bghome from "../../Assets/bghome.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
-import Navbar3 from "../Shared/Navbar/Navbar3";
+import Navbar from "../Shared/Navbar/Navbar";
 
 const Upload = () => {
   return (
     <>
-      <div className='relative'>
-        <Navbar3></Navbar3>
+      <div className='relative z-20'>
+        <Navbar/>
       </div>
-      <div className="absolute bg-cover">
+      <div className="absolute bg-cover -mt-28">
         <img className="w-screen h-screen" src={bghome} alt="" />
         <img
           className="w-60  flex absolute right-0 top-0 "
