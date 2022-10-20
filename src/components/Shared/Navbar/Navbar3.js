@@ -8,7 +8,7 @@ const Navbar3 = () => {
   const normalLink = "font-bold text-white";
   return (
     <>
-     <div className="bg-vividAuburn flex  items-center justify-around">
+     <div className="flex  items-center justify-around">
         
         <div className="relative z-10">
           <Link to="/">
