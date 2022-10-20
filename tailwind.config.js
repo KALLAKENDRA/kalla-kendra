@@ -38,11 +38,7 @@ module.exports = {
         1440: "90rem"
 
       },
-      height:{
-        600:"37.5rem",
-        640: "40rem",
-        1440: "90rem"
-      },
+    
       fontFamily: {
         acme: ["Acme", "sans-serif"],
         aclonica: ["Aclonica", "sans-serif"],
