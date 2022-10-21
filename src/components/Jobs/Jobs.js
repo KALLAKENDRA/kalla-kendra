@@ -15,9 +15,7 @@ const Jobs = () => {
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
       <div className="relative">
-
         <Navbar3></Navbar3>
-
       </div>
 
       <div className="relative flex items-center justify-around  mt-6 ">
