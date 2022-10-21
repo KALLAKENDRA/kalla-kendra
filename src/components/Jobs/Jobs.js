@@ -20,7 +20,35 @@ const Jobs = () => {
 
       </div>
 
+      <div className="flex items-center justify-center">
+        <div className="relative  grid desktopLg:grid-cols-5 desktopMd:grid-cols-5 desktopSm:grid-cols-5 laptopLg:grid-cols-5 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-1 mobileMd:grid-cols-1 mobileLg:grid-cols-1  gap-12   mt-6 ">
+          <div class="btn-group ">
+            <button class="btn  bg-darkRed">Part Time</button>
+            <button class="btn bg-darkRed">full Time</button>
+            <button class="btn bg-vividAuburn">Internship</button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-darkRed">
 
+              Location{" "}
+              <img className="text-white ml-2" src={locationIcon} alt="" />
+            </button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-vividAuburn">Remote</button>
+            <button class="btn bg-darkRed">In Office</button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-darkRed">Keywords</button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-darkRed">
+
+              Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="relative overflow-x-hidden grid desktopLg:grid-cols-2 desktopMd:grid-cols-2 desktopSm:grid-cols-2 laptopLg:grid-cols-2 laptopMd:grid-cols-1 laptopSm:grid-cols-1 tablet:grid-cols-1 mobileLg:grid-cols-1 mobileMd:grid-cols-1 gap-24 mt-12 ml-2 mr-2">
         <div className=" font-semibold  flex items-center justify-center">
