@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children, useState } from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
@@ -18,32 +18,86 @@ const JobsList = [
 ];
 
 const Jobs = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const SideMenu = (
+    <label className="btn btn-circle  laptopLg:hidden">
+      {!openDrawer && (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setOpenDrawer(true);
+          }}
+        >
+          R
+        </button>
+      )}
+      {openDrawer && (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setOpenDrawer(false);
+          }}
+        >
+          X
+        </button>
+      )}
+    </label>
+  );
+
+  const DrawerContent = ({ children }) => {
+    return (
+      <div className="bg-white w-full h-full overflow-y-scroll justify-between absolute">
+        <button
+          className="btn btn-circle bg-error flex text-end "
+          onClick={(e) => {
+            e.preventDefault();
+            setOpenDrawer(false);
+          }}
+        >
+          X
+        </button>
+        {children}
+      </div>
+    );
+  };
+
   const background = "https://i.ibb.co/3kvrMsr/Background.png";
   const homeicon = "https://i.ibb.co/d2HTqHm/homeicon.png";
 
   const renderJobs = (JobsList || []).map((job) => {
     return (
-      <div class="card w-full h-2/12 bg-base-100 shadow-xl p-6 rounded-none flex flex-col flex-wrap justify-between">
+      <div
+        key={job.id}
+        className="card relative w-full h-2/12 bg-base-100 shadow-xl p-6 rounded-none flex flex-col flex-wrap justify-between"
+      >
+        {openDrawer && (
+          <DrawerContent>
+            <div className="flex text-xl w-full text-center  flex-col ">
+              <div>
+                <h1 className="font-bold">Start date</h1>
+                <h1 className="font-semibold">{job.StartDate}</h1>
+              </div>
+              <div>
+                <h1 className="font-bold">Duration</h1>
+                <h1 className="font-semibold">{job.Duration}</h1>
+              </div>
+              <div>
+                <h1 className="font-bold">Stipend</h1>
+                <h1 className="font-semibold">{job.ApplyBy}</h1>
+              </div>
+              <div>
+                <h1 className="font-bold">Apply By</h1>
+                <h1 className="font-semibold">{job.ApplyBy}</h1>
+              </div>
+            </div>
+          </DrawerContent>
+        )}
         <div className=" flex items-center justify-between mb-8 w-full flex-wrap">
+          {SideMenu}
           <div>
             <h1 className="font-bold text-2xl ">{job.Name}</h1>
             <h1 className="font-semibold text-xl">{job.CompanyName}</h1>
-            <div className="dropdown laptopLg:hidden">
-              <label tabIndex={0} className="btn m-1">
-                open
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Item 2</a>
-                </li>
-              </ul>
-            </div>
           </div>
           <div>
             <button className="btn bg-lightGrey rounded-full w-full text-black">
@@ -152,7 +206,7 @@ const Jobs = () => {
         </div>
 
         <div className="relative flex w-full justify-between mt-1 mb-1 flex-wrap">
-          <div className="mx-auto bg-white p-5 font-semibold flex flex-col gap-16 h-full mt-2  tablet:bg-white p-5 font-semibold flex flex-col gap-16 h-full w-4/12 ">
+          <div className="bg-white p-5 font-semibold flex flex-col gap-16 h-full w-4/12">
             <div className="flex justify-between">
               <input
                 type="checkbox"
@@ -200,7 +254,7 @@ const Jobs = () => {
             </div>
             <button className="w-full text-end">Cancel</button>
           </div>
-          <div className="mx-auto  tablet:flex flex-col h-full gap-2 mt-2">
+          <div className="md:flex  flex-col h-full gap-2 relative">
             {renderJobs}
             {renderJobs}
           </div>
