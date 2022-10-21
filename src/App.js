@@ -19,7 +19,7 @@ import Slideshow from './components/Slideshow/Slideshow';
 
 function App() {
   return (
-    <div className="App">
+    // <div className="App">
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
@@ -39,7 +39,7 @@ function App() {
         <Route path='/viewdesignpage' element={<ViewDesignPage />}></Route>
       </Routes>
 
-    </div>
+    // </div>
   );
 }
 
