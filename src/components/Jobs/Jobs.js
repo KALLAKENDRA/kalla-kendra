@@ -2,7 +2,7 @@ import React from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
-import JobNav from "./JobNav";
+
 
 
 const Jobs = () => {
@@ -11,12 +11,21 @@ const Jobs = () => {
 
   return (
     <>
+
+      <div className="top-0 absolute bg-cover">
+        <img className="w-screen h-screen" src={background} alt="" />
+      </div>
       <div className="top-0 absolute bg-cover">
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
       <div className="relative bg-vividAuburn overflow-x-hidden">
 
-        <Navbar3></Navbar3>
+        <div className="relative">
+
+
+          <Navbar3></Navbar3>
+
+        </div>
 
       </div>
 
@@ -48,8 +57,8 @@ const Jobs = () => {
             </button>
           </div>
         </div>
-      </div>
 
+      </div>
       <div className="relative overflow-x-hidden grid desktopLg:grid-cols-2 desktopMd:grid-cols-2 desktopSm:grid-cols-2 laptopLg:grid-cols-2 laptopMd:grid-cols-1 laptopSm:grid-cols-1 tablet:grid-cols-1 mobileLg:grid-cols-1 mobileMd:grid-cols-1 gap-24 mt-12 ml-2 mr-2">
         <div className=" font-semibold  flex items-center justify-center">
           <div className="w-full desktopLg:w-1/2 desktopMd:w-1/2 desktopSm:w-1/2 tablet:w-full mobileLg:w-full mobileMd:w-full bg-white p-24 ">
@@ -211,8 +220,14 @@ const Jobs = () => {
           </div>
         </div>
       </div>
+
+
     </>
-  );
-};
+  )
+
+
+}
 
 export default Jobs;
+
+

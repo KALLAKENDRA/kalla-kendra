@@ -11,7 +11,7 @@ const artList = [
     inspect: 65,
     personName: "Rajeev Barma",
     name: "Modern art",
-    img: "https://i.ibb.co/H44mqpP/modern-Art1.jpg",
+    img: "https://i.ibb.co/1YVdZj2/modern1.jpg",
     button: "Follow",
   },
   {
@@ -20,7 +20,7 @@ const artList = [
     inspect: 65,
     personName: "Simran kher",
     name: "Modern art",
-    img: "https://i.ibb.co/jZCwWdk/modern-Art2.jpg",
+    img: "https://i.ibb.co/ZMF1x5B/modern2.jpg",
     button: "Follow",
   },
   {
@@ -29,7 +29,7 @@ const artList = [
     inspect: 65,
     personName: "Sanjukta",
     name: "Modern art",
-    img: "https://i.ibb.co/Qbv2Dwm/modern-Art3.jpg",
+    img: "https://i.ibb.co/VBGhGH9/modern3.jpg",
     button: "Follow",
   },
   {
@@ -38,7 +38,7 @@ const artList = [
     inspect: 65,
     personName: "Ravi kishan",
     name: "Modern art",
-    img: "https://i.ibb.co/kJHYPCt/modern-Art4.jpg",
+    img: "https://i.ibb.co/6FsBkm0/modern4.jpg",
     button: "Follow",
   },
   {
@@ -47,7 +47,7 @@ const artList = [
     inspect: 65,
     personName: "Aish khan",
     name: "Modern art",
-    img: "https://i.ibb.co/j8M5crG/modern-Art5.jpg",
+    img: "https://i.ibb.co/s3cZBZv/modern5.jpg",
     button: "Follow",
   },
   {
@@ -56,7 +56,7 @@ const artList = [
     inspect: 65,
     personName: "Adyasha pani",
     name: "Modern art",
-    img: "https://i.ibb.co/hBG2q5B/modern-Art6.jpg",
+    img: "https://i.ibb.co/LxQL0sq/modern6.jpg",
     button: "Follow",
   },
 ];
@@ -70,11 +70,13 @@ const UploadPhoto = () => {
         </div>
         <Navbar2 />
       </div>
-      <div className="bg-radial container mx-auto py-8 px-8">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-16">
+      <div className="bg-radial">
+        <div className="py-8 px-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-16">
           {artList.map((art) => (
             <ModernArt art={art} key={art.id}></ModernArt>
           ))}
+        </div>
         </div>
       </div>
     </>

@@ -15,6 +15,7 @@ import StartYourJourny from './components/StartYourJourny/StartYourJourny';
 import Upload from './components/Upload/Upload';
 import UploadPhoto from './components/UploadPhoto/UploadPhoto';
 import ViewDesignPage from './components/ViewDesignPage/ViewDesignPage';
+import Slideshow from './components/Slideshow/Slideshow';
 
 function App() {
   return (
@@ -22,8 +23,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/imageinfo' element={<ImageInfo />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/forgotPass' element={<ForgotPassword />}></Route>
+        <Route path='/slideshow' element={<Slideshow />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/startyourjourny' element={<StartYourJourny />}></Route>
         <Route path='/discover' element={<Discover />}></Route>

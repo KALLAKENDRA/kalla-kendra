@@ -36,7 +36,7 @@ const ModernArt = ({ art }) => {
             />
             <h3 className="text-white ml-5"><Link to='/viewdesignpage'>{personName}</Link></h3>
           </div>
-          <div className="flex items-center">
+          <div className="flex">
             <button className=" bg-lightRose text-black px-8 h-8 rounded-2xl">
               {button}
             </button>
