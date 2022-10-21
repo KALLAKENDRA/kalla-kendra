@@ -20,7 +20,7 @@ const Jobs = () => {
 
       </div>
 
-      <div className="flex items-center justify-center">
+      <div className="flex overflow-x-hidden items-center justify-center">
         <div className="relative  grid desktopLg:grid-cols-5 desktopMd:grid-cols-5 desktopSm:grid-cols-5 laptopLg:grid-cols-5 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-1 mobileMd:grid-cols-1 mobileLg:grid-cols-1  gap-12   mt-6 ">
           <div class="btn-group ">
             <button class="btn  bg-darkRed">Part Time</button>
