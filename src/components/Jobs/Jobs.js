@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
@@ -21,35 +21,35 @@ const Jobs = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const SideMenu = (
-    <label className="btn btn-circle  laptopLg:hidden">
+    <div className="btn btn-circle xl:hidden">
       {!openDrawer && (
-        <button
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 btn btn-circle "
           onClick={(e) => {
             e.preventDefault();
             setOpenDrawer(true);
           }}
         >
-          R
-        </button>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+          />
+        </svg>
       )}
-      {openDrawer && (
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            setOpenDrawer(false);
-          }}
-        >
-          X
-        </button>
-      )}
-    </label>
+    </div>
   );
 
   const DrawerContent = ({ children }) => {
     return (
-      <div className="bg-white w-full h-full overflow-y-scroll justify-between absolute">
+      <div className="bg-white w-10/12 h-full overflow-scroll justify-between font-mono transition-all p-4 absolute">
         <button
-          className="btn btn-circle bg-error flex text-end "
+          className="btn btn-circle bg-error "
           onClick={(e) => {
             e.preventDefault();
             setOpenDrawer(false);
@@ -66,6 +66,8 @@ const Jobs = () => {
   const homeicon = "https://i.ibb.co/d2HTqHm/homeicon.png";
 
   const renderJobs = (JobsList || []).map((job) => {
+    console.log(window.screen.width);
+
     return (
       <div
         key={job.id}
@@ -73,28 +75,28 @@ const Jobs = () => {
       >
         {openDrawer && (
           <DrawerContent>
-            <div className="flex text-xl w-full text-center  flex-col ">
+            <div className="flex text-xl w-full text-center ">
               <div>
-                <h1 className="font-bold">Start date</h1>
+                <h1 className="font-bold text-vividGreen">Start date</h1>
                 <h1 className="font-semibold">{job.StartDate}</h1>
               </div>
               <div>
-                <h1 className="font-bold">Duration</h1>
+                <h1 className="font-bold text-vividGreen">Duration</h1>
                 <h1 className="font-semibold">{job.Duration}</h1>
               </div>
               <div>
-                <h1 className="font-bold">Stipend</h1>
+                <h1 className="font-bold text-vividGreen">Stipend</h1>
                 <h1 className="font-semibold">{job.ApplyBy}</h1>
               </div>
               <div>
-                <h1 className="font-bold">Apply By</h1>
+                <h1 className="font-bold text-vividGreen">Apply By</h1>
                 <h1 className="font-semibold">{job.ApplyBy}</h1>
               </div>
             </div>
           </DrawerContent>
         )}
+        {SideMenu}
         <div className=" flex items-center justify-between mb-8 w-full flex-wrap">
-          {SideMenu}
           <div>
             <h1 className="font-bold text-2xl ">{job.Name}</h1>
             <h1 className="font-semibold text-xl">{job.CompanyName}</h1>
@@ -113,7 +115,7 @@ const Jobs = () => {
           </div>
         </div>
 
-        <div className="hidden laptopLg:flex pb-8 w-fit gap-36 justify-between flex-warp">
+        <div className="hidden xl:flex pb-8 w-fit gap-36 justify-between flex-warp">
           <div>
             <h1 className="font-bold">Start date</h1>
             <h1 className="font-semibold">{job.StartDate}</h1>
@@ -153,7 +155,7 @@ const Jobs = () => {
             </svg>
           </div>
           <div>
-            <button className="bg-lightRose rounded-full py-1 px-10 font-semibold text-black hover:bg">
+            <button className="bg-lightRose rounded-full py-1 px-10 font-semibold text-black duration-300	 hover:bg">
               Apply
             </button>
           </div>
@@ -174,7 +176,7 @@ const Jobs = () => {
           <Navbar3></Navbar3>
         </div>
 
-        <div className=" relative flex items-center justify-between mt-1 w-full mx-auto flex-wrap ">
+        <div className="relative flex items-center justify-between mt-1 w-full mx-auto flex-wrap ">
           <div className="btn-group ">
             <button className="btn  bg-darkRed">Part Time</button>
             <button className="btn bg-darkRed">full Time</button>
@@ -205,9 +207,18 @@ const Jobs = () => {
           </div>
         </div>
 
-        <div className="relative flex w-full justify-between mt-1 mb-1 flex-wrap">
-          <div className="bg-white p-5 font-semibold flex flex-col gap-16 h-full w-4/12">
-            <div className="flex justify-between">
+        <div className="md:flex w-full flex-row justify-between mt-1 mb-1 flex-wrap ">
+          <div className="dropdown md:hidden">
+            <label tabIndex={0} className="btn m-1">
+              Filters
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+              <div className="z-10 bg-white p-5 font-semibold flex flex-col gap-12 h-full w-full">
+            <div className="flex justify-between ">
               <input
                 type="checkbox"
                 className="checkbox bg-lightGrey rounded-none"
@@ -244,7 +255,7 @@ const Jobs = () => {
                 />
                 <p className="text-start w-4/5">Work from Home</p>
               </div>
-              <div className=" flex  justify-between">
+              <div className=" flex justify-between">
                 <input
                   type="checkbox"
                   className="checkbox bg-lightGrey rounded-none"
@@ -254,7 +265,61 @@ const Jobs = () => {
             </div>
             <button className="w-full text-end">Cancel</button>
           </div>
-          <div className="md:flex  flex-col h-full gap-2 relative">
+              </li>
+          
+            </ul>
+          </div>
+
+          <div className="z-10 bg-white p-5 font-semibold flex flex-col gap-12 h-full w-4/12">
+            <div className="hidden md:flex justify-between ">
+              <input
+                type="checkbox"
+                className="checkbox bg-lightGrey rounded-none"
+              />
+              <p className="text-start w-4/5">As Per My Preference</p>
+            </div>
+            <div className="hidden md:flex flex-col h-2/6 justify-between my-auto">
+              <div className="flex flex-col  form-control w-full">
+                <label className="label">
+                  <span className="label-text">Categories</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type here"
+                  className="input  w-full  bg-lightGrey rounded-none"
+                />
+              </div>
+              <div className="flex flex-col form-control w-full">
+                <label className="label">
+                  <span className="label-text ">Location</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type here"
+                  className="input w-full bg-lightGrey rounded-none"
+                />
+              </div>
+            </div>
+            <div className="hidden md:flex flex-col w-full justify-between h-16 ">
+              <div className="flex justify-between ">
+                <input
+                  type="checkbox"
+                  className="checkbox bg-lightGrey rounded-none"
+                />
+                <p className="text-start w-4/5">Work from Home</p>
+              </div>
+              <div className=" flex justify-between">
+                <input
+                  type="checkbox"
+                  className="checkbox bg-lightGrey rounded-none"
+                />
+                <p className="text-start w-4/5">Part Time</p>
+              </div>
+            </div>
+            <button className="hidden xl:w-full text-end">Cancel</button>
+          </div>
+
+          <div className=" flex flex-col h-full gap-2">
             {renderJobs}
             {renderJobs}
           </div>
