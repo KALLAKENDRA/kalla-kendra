@@ -1,19 +1,20 @@
 import React from 'react';
-import BG from '../../Assets/ViewDesignPage/bg.png'
-import ModernImg from '../../Assets/ViewDesignPage/ModernArt.png'
-import MoreImg1 from '../../Assets/ViewDesignPage/MoreImg1.png'
-import MoreImg2 from '../../Assets/ViewDesignPage/MoreImg2.png'
-import MoreImg3 from '../../Assets/ViewDesignPage/MoreImg3.png'
-import shape2 from '../../Assets/ViewDesignPage/shape2.png'
-import shape1 from '../../Assets/ViewDesignPage/shape1.png'
-import Like from '../../Assets/ViewDesignPage/likeIcon.png'
-import viewIcon from '../../Assets/ViewDesignPage/eyeIcon.png'
-import Avater from '../../Assets/ViewDesignPage/Avatar.png'
-import MoreImg4 from '../../Assets/ViewDesignPage/MoreImg4.png'
-import MoreImg5 from '../../Assets/ViewDesignPage/MoreImg5.png'
-import MoreImg6 from '../../Assets/ViewDesignPage/MoreImg6.png'
-import MoreImg7 from '../../Assets/ViewDesignPage/MoreImg7.png'
-import MoreImg8 from '../../Assets/ViewDesignPage/MoreImg8.png'
+import { Link } from 'react-router-dom';
+import Avater from '../../Assets/ViewDesignPage/Avatar.png';
+import BG from '../../Assets/ViewDesignPage/bg.png';
+import viewIcon from '../../Assets/ViewDesignPage/eyeIcon.png';
+import Like from '../../Assets/ViewDesignPage/likeIcon.png';
+import ModernImg from '../../Assets/ViewDesignPage/ModernArt.png';
+import MoreImg1 from '../../Assets/ViewDesignPage/MoreImg1.png';
+import MoreImg2 from '../../Assets/ViewDesignPage/MoreImg2.png';
+import MoreImg3 from '../../Assets/ViewDesignPage/MoreImg3.png';
+import MoreImg4 from '../../Assets/ViewDesignPage/MoreImg4.png';
+import MoreImg5 from '../../Assets/ViewDesignPage/MoreImg5.png';
+import MoreImg6 from '../../Assets/ViewDesignPage/MoreImg6.png';
+import MoreImg7 from '../../Assets/ViewDesignPage/MoreImg7.png';
+import MoreImg8 from '../../Assets/ViewDesignPage/MoreImg8.png';
+import shape1 from '../../Assets/ViewDesignPage/shape1.png';
+import shape2 from '../../Assets/ViewDesignPage/shape2.png';
 
 const ViewDesignPage = () => {
     return (
@@ -21,7 +22,7 @@ const ViewDesignPage = () => {
             <div style={{ backgroundImage: `url(${BG})` }}>
                 <div className='flex justify-between'>
                     <div className='mx-5 pt-10'>
-                        <img className='w-[600px] h-[384px]' src={ModernImg} alt="" />
+                        <Link to='/slideshow'><img className='w-[600px] h-[384px]' src={ModernImg} alt="" /></Link>
                     </div>
                     <div className=''>
                         <h4 className='text-left font-bold pt-10 text-white'>About</h4>

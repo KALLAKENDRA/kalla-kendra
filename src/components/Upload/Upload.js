@@ -3,11 +3,15 @@ import React from "react";
 import bghome from "../../Assets/bghome.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
+import Navbar from "../Shared/Navbar/Navbar";
 
 const Upload = () => {
   return (
     <>
-      <div className="top-0 absolute bg-cover">
+      <div className='relative z-20'>
+        <Navbar/>
+      </div>
+      <div className="absolute bg-cover -mt-28">
         <img className="w-screen h-screen" src={bghome} alt="" />
         <img
           className="w-60  flex absolute right-0 top-0 "
@@ -31,7 +35,8 @@ const Upload = () => {
             </div>
 
             <div>
-              <ul className="list-disc grid grid-cols-2 gap-10 text-base">
+              <ul className="list-disc grid desktopLg:grid-cols-2 desktopMd:grid-cols-2 desktopSm:grid-cols-2 laptopLg:grid-cols-2 laptopMd:grid-cols-2 laptopSm:grid-cols-2 
+              tablet:grid-cols-1 mobileLg:grid-cols-1 mobileMd:grid-cols-1 gap-4 p-12 text-base">
                 <li>High resolution images (png, jpg, gif)</li>
                 <li>Animated gifs (4:3, 800x600 - 1600x1200)</li>
                 <li>Videos (mp4, 4:3, &#60; 60 secs) PRO</li>
@@ -39,14 +44,14 @@ const Upload = () => {
               </ul>
             </div>
 
-           
-              <div className="mt-28">
-                <label for="files" className="btn w-40 rounded-2xl bg-greenWhite text-darkRed hover:bg-yellow border-none">
-                  Upload
-                </label>
-                <input id="files" className="hidden" type="file" />
-              </div>
-            
+
+            <div className="mt-12">
+              <label for="files" className="btn w-40 rounded-2xl bg-greenWhite text-darkRed hover:bg-yellow border-none">
+                Upload
+              </label>
+              <input id="files" className="hidden" type="file" />
+            </div>
+
           </div>
         </div>
       </div>
