@@ -4,6 +4,7 @@ import bghome from "../../Assets/bghome.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
 import Navbar from "../Shared/Navbar/Navbar";
+import Navbar3 from "../Shared/Navbar/Navbar3";
 
 const Upload = () => {
   return (
