@@ -39,9 +39,9 @@ module.exports = {
         '120':'60rem',
       },
       height:{
-        600:"37.5rem",
+        600:"37rem",
         640: "40rem",
-        1440: "90rem"
+        1520: "95rem"
 
       },
     

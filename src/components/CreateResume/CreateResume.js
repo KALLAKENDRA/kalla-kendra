@@ -15,7 +15,7 @@ const CreateResume = () => {
   return (
     <>
       <div className="top-0 absolute bg-cover ">
-        <img className="w-screen h-1440" src={bghome} alt="" />
+        <img className="w-screen h-1520" src={bghome} alt="" />
         <img
           className="w-60  flex absolute left-0 top-0"
           src={bgCorner2}
@@ -33,9 +33,9 @@ const CreateResume = () => {
       </div>
 
       <div className=" flex justify-center">
-        <div className="card bg-lightGrey bg-opacity-25 mt-9 desktopLg:w-120 laptopSm:w-119 laptopMd:w-119 tablet:w-2/4 mobileLg:w-3/4 mobileMd:w-54">
-          <div>
-            <h2 className="text-xl mb-8 laptopSm:ml-14 ml-10 tablet:ml-16 font-aclonica text-left text-white pt-4 pl-4">
+        <div className="card bg-lightGrey bg-opacity-25 mt-9 desktopLg:w-120 laptopSm:w-119 laptopMd:w-119 tablet:w-114 mobileLg:w-3/4 mobileMd:w-54">
+          <div className="w-80 tablet:w-96 tablet:ml-40 laptopMd:ml-60">
+            <h2 className="text-xl mb-4 laptopSm:ml-14 ml-4 tablet:ml-16 font-aclonica text-left text-white pt-4">
               Create a resume
             </h2>
             <form
@@ -44,14 +44,14 @@ const CreateResume = () => {
             >
               {/* name start  */}
 
-              <div className="flex laptopSm:flex-row flex-col">
+              <div className="flex tablet:flex-row laptopSm:flex-row  flex-col tablet:gap-4 laptopMd:gap-1">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">First Name</span>
                   </label>
                   <input
                     type="text"
-                    className="input bg-white h-7 w-53 bg-opacity-10 rounded-md"
+                    className="input bg-white h-7 w-53 laptopMd:w-60 bg-opacity-10 rounded-md"
                     {...register("firstName", {
                       required: {
                         value: true,
@@ -67,7 +67,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="text"
-                    className="input bg-white h-7 w-53 bg-opacity-10 rounded-md"
+                    className="input bg-white h-7 w-53 bg-opacity-10 rounded-md laptopMd:w-60"
                     {...register("middleName", {
                       required: {
                         value: true,
@@ -83,7 +83,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="text"
-                    className="input bg-white h-7 w-53 bg-opacity-10 rounded-md"
+                    className="input bg-white h-7 w-53 bg-opacity-10 rounded-md laptopMd:w-60"
                     {...register("lastName", {
                       required: {
                         value: true,
@@ -98,13 +98,13 @@ const CreateResume = () => {
 
               {/* email start  */}
 
-              <div className="form-control laptopSm:w-115">
+              <div className="form-control laptopSm:w-115 tablet:w-113 laptopMd:w-118">
                 <label className="label">
                   <span className=" text-base  text-white">Email</span>
                 </label>
                 <input
                   type="email"
-                  className="input bg-white h-7 bg-opacity-10 rounded-md"
+                  className="input bg-white h-7 bg-opacity-10 rounded-md "
                   {...register("email", {
                     required: {
                       value: true,
@@ -122,14 +122,14 @@ const CreateResume = () => {
 
               {/* phone start  */}
 
-              <div className="flex laptopSm:flex-row flex-col">
+              <div className="flex laptopSm:flex-row flex-col tablet:flex-row tablet:gap-8">
                 <div className="form-control laptopSm:mr-10 laptopSm:w-54 ">
                   <label className="label">
                     <span className=" text-base text-white">Ph no.</span>
                   </label>
                   <input
                     type="number"
-                    className="input bg-white  h-7 bg-opacity-10 rounded-md"
+                    className="input bg-white  h-7 bg-opacity-10 rounded-md tablet:w-80 laptopMd:w-96"
                     {...register("phNumber", {
                       required: {
                         value: true,
@@ -147,7 +147,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="number"
-                    className="input bg-white h-7 bg-opacity-10 rounded-md"
+                    className="input bg-white h-7 bg-opacity-10 rounded-md tablet:w-80 laptopMd:w-80"
                     {...register("altPhNumber", {
                       required: {
                         value: true,
@@ -166,7 +166,7 @@ const CreateResume = () => {
                 <label className="label">
                   <span className=" text-base text-white">Location</span>
                 </label>
-                <select className=" bg-white w-53 laptopSm:w-115 bg-opacity-10   h-7 rounded-md">
+                <select className=" bg-white w-53 tablet:w-113 laptopSm:w-115 laptopMd:w-118 bg-opacity-10   h-7 rounded-md">
                   <option disabled selected></option>
                   <option>India</option>
                   <option>USA</option>
@@ -177,7 +177,7 @@ const CreateResume = () => {
 
               {/* qualification, Board, University input start  */}
 
-              <div className="flex laptopSm:flex-row flex-col">
+              <div className="flex laptopSm:flex-row flex-col tablet:flex-row tablet:gap-4">
                 <div className="form-control">
                   <label className="label">
                     <span className=" text-base text-white">Qualification</span>
@@ -225,8 +225,8 @@ const CreateResume = () => {
 
               {/* age gender input start   */}
 
-              <div className="flex laptopSm:flex-row flex-col">
-                <div className="form-control laptopSm:mr-10 laptopSm:w-54">
+              <div className="flex laptopSm:flex-row flex-col tablet:flex-row tablet:gap-10">
+                <div className="form-control laptopSm:mr-10 laptopSm:w-54 tablet:w-80">
                   <label className="label">
                     <span className=" text-base text-white">Age</span>
                   </label>
@@ -241,7 +241,7 @@ const CreateResume = () => {
                     })}
                   />
                 </div>
-                <div className="form-control laptopSm:w-54">
+                <div className="form-control laptopSm:w-54 tablet:w-80">
                   <label className="label">
                     <span className=" text-base text-white">Sex</span>
                   </label>
@@ -258,8 +258,8 @@ const CreateResume = () => {
 
               {/* application , occupation input start   */}
 
-              <div className="flex laptopSm:flex-row flex-col">
-                <div className="form-control laptopSm:w-54 laptopSm:mr-10 w-53">
+              <div className="flex laptopSm:flex-row flex-col tablet:flex-row tablet:gap-10">
+                <div className="form-control laptopSm:w-54 laptopSm:mr-10 tablet:w-80 w-53">
                   <label className="label">
                     <span className=" text-base text-white">
                       Application type
@@ -272,7 +272,7 @@ const CreateResume = () => {
                     <option>Full time</option>
                   </select>
                 </div>
-                <div className="form-control laptopSm:w-54 w-53">
+                <div className="form-control laptopSm:w-54 w-53 tablet:w-80">
                   <label className="label">
                     <span className=" text-base text-white">Occupation</span>
                   </label>
@@ -289,8 +289,8 @@ const CreateResume = () => {
 
               {/* job type, year of exp input start   */}
 
-              <div className="flex laptopSm:flex-row flex-col">
-                <div className="form-control laptopSm:w-54 laptopSm:mr-10">
+              <div className="flex laptopSm:flex-row flex-col tablet:flex-row tablet:gap-10">
+                <div className="form-control laptopSm:w-54 tablet:w-80 laptopSm:mr-10">
                   <label className="label">
                     <span className=" text-base text-white">Job type</span>
                   </label>
@@ -302,7 +302,7 @@ const CreateResume = () => {
                   </select>
                 </div>
 
-                <div className="form-control laptopSm:w-54">
+                <div className="form-control laptopSm:w-54 tablet:w-80">
                   <label className="label">
                     <span className=" text-base text-white">
                       Year of experience
@@ -329,13 +329,13 @@ const CreateResume = () => {
                 value="Upload photo"
               /> */}
 
-              <button className=" rounded-lg mt-12 mb-7 h-8 w-44 bg-rosewood text-white text-xs  hover:bg-azure">
+              <button className=" rounded-lg mt-12 mb-2 h-8 w-44 bg-rosewood text-white text-xs  hover:bg-azure">
                 {" "}
                 <Link to="/uploadphoto">Upload photo</Link>
               </button>
 
               <input
-                className="btn border-none mt-4 mb-7 w-56 bg-rosewood hover:bg-azure"
+                className="btn border-none mt-2 mb-7 w-48 bg-rosewood hover:bg-azure"
                 type="submit"
                 value="Create"
               />
