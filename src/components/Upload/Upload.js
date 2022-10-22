@@ -3,12 +3,11 @@ import React from "react";
 import bghome from "../../Assets/bghome.png";
 import startjourneyp1 from "../../Assets/startjourneyp1.png";
 import startjourneyp2 from "../../Assets/startjourneyp2.png";
-import Navbar from "../Shared/Navbar/Navbar";
+import Navbar3 from "../Shared/Navbar/Navbar3";
 
 const Upload = () => {
   return (
     <>
-<<<<<<< HEAD
       <div>
         <div className="top-0 absolute bg-cover">
           <img className="w-screen h-screen" src={bghome} alt="" />
@@ -28,33 +27,6 @@ const Upload = () => {
             alt=""
           />
         </div>
-=======
-      <div className='relative z-20'>
-        <Navbar/>
-      </div>
-      <div className="absolute bg-cover -mt-28">
-        <img className="w-screen h-screen" src={bghome} alt="" />
-        <img
-          className="w-60  flex absolute right-0 top-0 "
-          src={startjourneyp2}
-          alt=""
-        />
-        <img
-          className="w-60 absolute bottom-0  left-0 "
-          src={startjourneyp1}
-          alt=""
-        />
-      </div>
-
-      <div className="relative z-10">
-        <div className="text-white flex items-center justify-center pt-48">
-          <div className="flex-col items-center">
-            <div className="text-center  pb-12 text-xl">
-              <h1>Drag and drop an image or Browse</h1>
-              <h1>1600 x 1200 or higher recommended. Max 10Mb each</h1>
-              <h1>(20MB for videos)</h1>
-            </div>
->>>>>>> 2babded1063e0e2a3263c86fe8dd4d4732058753
 
         <div className="relative z-10">
           <div className="text-white flex items-center justify-center pt-48">

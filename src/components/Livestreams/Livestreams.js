@@ -51,7 +51,9 @@ const Livestreams = () => {
                 </div>
               </div>
               <div>
-                <h4 className='bg-[#FFC7C7] py-2 px-10 rounded-3xl font-semibold'>Follow</h4>
+                <Link to='/profile'>
+                <button className='bg-[#FFC7C7] py-2 px-10 rounded-3xl font-semibold'>Follow</button>
+                </Link>
               </div>
             </div>
           </div>
