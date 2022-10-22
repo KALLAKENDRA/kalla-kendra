@@ -13,7 +13,7 @@ const Upload = () => {
           <img className="w-screen h-screen" src={bghome} alt="" />
         </div>
         <div className="relative">
-          <Navbar3></Navbar3>
+          <Navbar></Navbar>
         </div>
         <div>
           <img
