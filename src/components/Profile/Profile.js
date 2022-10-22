@@ -62,7 +62,7 @@ const Profile = () => {
             alt=""
           />
 
-            <div className="relative flex laptopMd:flex-row tablet:flex-row flex-col mobileMd:items-center mobileLg:items-center mt-9 pb-8">
+            <div className="relative flex laptopMd:flex-row tablet:flex-row tablet:items-start laptopLg:justify-evenly flex-col mobileMd:items-center mobileLg:items-center mt-9 pb-8">
           {/* Profile start */}
           <div className="w-54 lg:ml-16 tablet:ml-6 laptopSm:53">
             <div className="bg-lightGrey bg-opacity-30 pb-8 mb-6">
