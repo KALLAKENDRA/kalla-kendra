@@ -75,7 +75,7 @@ const Jobs = () => {
       >
         {openDrawer && (
           <DrawerContent>
-            <div className="flex text-xl w-full text-center ">
+            <div className="flex text-xl w-full text-center flex-col">
               <div>
                 <h1 className="font-bold text-vividGreen">Start date</h1>
                 <h1 className="font-semibold">{job.StartDate}</h1>
