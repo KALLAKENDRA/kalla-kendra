@@ -66,8 +66,6 @@ const Jobs = () => {
   const homeicon = "https://i.ibb.co/d2HTqHm/homeicon.png";
 
   const renderJobs = (JobsList || []).map((job) => {
-    console.log(window.screen.width);
-
     return (
       <div
         key={job.id}
@@ -171,31 +169,31 @@ const Jobs = () => {
         src={background}
         alt=""
       />
-      <div className="w-11/12 mx-auto">
+      <div className="w-full md:w-11/12 mx-auto">
         <div className="relative">
           <Navbar3></Navbar3>
         </div>
 
         <div className="relative flex items-center justify-between mt-1 w-full mx-auto flex-wrap ">
-          <div className="btn-group ">
+          <div className="btn-group flex flex-wrap justify-center">
             <button className="btn  bg-darkRed">Part Time</button>
             <button className="btn bg-darkRed">full Time</button>
             <button className="btn bg-vividAuburn">Internship</button>
           </div>
-          <div className="btn-group ">
+          <div className="btn-group flex flex-wrap mx-auto">
             <button className="btn bg-darkRed">
               Location{" "}
               <img className="text-white ml-2" src={locationIcon} alt="" />
             </button>
           </div>
-          <div className="btn-group ">
+          <div className="btn-group flex flex-wrap mx-auto">
             <button className="btn bg-vividAuburn">Remote</button>
             <button className="btn bg-darkRed">In Office</button>
           </div>
-          <div className="btn-group">
+          <div className="btn-group flex mx-auto">
             <button className="btn bg-darkRed">Keywords</button>
           </div>
-          <div className="btn-group ">
+          <div className="btn-group flex flex-wrap ">
             <div className="btn bg-darkRed flex">
               <input
                 type="search"
@@ -207,7 +205,7 @@ const Jobs = () => {
           </div>
         </div>
 
-        <div className="md:flex w-full flex-row justify-between mt-1 mb-1 flex-wrap ">
+        <div className="flex-nowrap md:flex w-full flex-row justify-between mt-1 mb-1 flex-wrap ">
           <div className="dropdown md:hidden">
             <label tabIndex={0} className="btn m-1">
               Filters
@@ -217,56 +215,55 @@ const Jobs = () => {
               className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-              <div className="z-10 bg-white p-5 font-semibold flex flex-col gap-12 h-full w-full">
-            <div className="flex justify-between ">
-              <input
-                type="checkbox"
-                className="checkbox bg-lightGrey rounded-none"
-              />
-              <p className="text-start w-4/5">As Per My Preference</p>
-            </div>
-            <div className="flex flex-col h-2/6 justify-between my-auto">
-              <div className="flex flex-col  form-control w-full">
-                <label className="label">
-                  <span className="label-text">Categories</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input  w-full  bg-lightGrey rounded-none"
-                />
-              </div>
-              <div className="flex flex-col form-control w-full">
-                <label className="label">
-                  <span className="label-text ">Location</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input w-full bg-lightGrey rounded-none"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col w-full justify-between h-16 ">
-              <div className="flex justify-between ">
-                <input
-                  type="checkbox"
-                  className="checkbox bg-lightGrey rounded-none"
-                />
-                <p className="text-start w-4/5">Work from Home</p>
-              </div>
-              <div className=" flex justify-between">
-                <input
-                  type="checkbox"
-                  className="checkbox bg-lightGrey rounded-none"
-                />
-                <p className="text-start w-4/5">Part Time</p>
-              </div>
-            </div>
-            <button className="w-full text-end">Cancel</button>
-          </div>
+                <div className="z-10 bg-white p-5 font-semibold flex flex-col gap-12 h-full w-full">
+                  <div className="flex justify-between ">
+                    <input
+                      type="checkbox"
+                      className="checkbox bg-lightGrey rounded-none"
+                    />
+                    <p className="text-start w-4/5">As Per My Preference</p>
+                  </div>
+                  <div className="flex flex-col h-2/6 justify-between my-auto">
+                    <div className="flex flex-col  form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Categories</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Type here"
+                        className="input  w-full  bg-lightGrey rounded-none"
+                      />
+                    </div>
+                    <div className="flex flex-col form-control w-full">
+                      <label className="label">
+                        <span className="label-text ">Location</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Type here"
+                        className="input w-full bg-lightGrey rounded-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col w-full justify-between h-16 ">
+                    <div className="flex justify-between ">
+                      <input
+                        type="checkbox"
+                        className="checkbox bg-lightGrey rounded-none"
+                      />
+                      <p className="text-start w-4/5">Work from Home</p>
+                    </div>
+                    <div className=" flex justify-between">
+                      <input
+                        type="checkbox"
+                        className="checkbox bg-lightGrey rounded-none"
+                      />
+                      <p className="text-start w-4/5">Part Time</p>
+                    </div>
+                  </div>
+                  <button className="w-full text-end">Cancel</button>
+                </div>
               </li>
-          
             </ul>
           </div>
 
