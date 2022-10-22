@@ -2,7 +2,6 @@ import React from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
-import JobNav from "./JobNav";
 
 
 const Jobs = () => {
@@ -15,9 +14,7 @@ const Jobs = () => {
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
       <div className="relative">
-
         <Navbar3></Navbar3>
-
       </div>
 
       <div className="relative flex items-center justify-around  mt-6 ">
