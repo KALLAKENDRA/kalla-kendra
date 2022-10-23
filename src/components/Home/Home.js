@@ -18,15 +18,15 @@ const Home = () => {
         <div className="relative z-50">
           <Navbar />
         </div>
-        <div className="w-full relative flex justify-between h-fit text-center">
+        <div className="w-full relative flex justify-between h-fit ">
           <img src={homeBannerP1} alt="" className="w-1/12" />
           <div className="m-auto h-36 flex flex-col justify-evenly">
-            <h1 className="text-4xl text-white font-acme">
+            <h1 className="text-4xl text-white font-acme ">
               Welcome! to kalla kendra
             </h1>
-            <Link to="/startyourjourny">
-              <button className="w-40 h-10  bg-lightRose rounded-full text-iridium text-base font-aclonica hover:bg-yellow">
-                World of Artist
+            <Link to="/startyourjourny" className="mx-auto">
+              <button className="w-40 h-10 bg-lightRose rounded-full text-iridium text-base font-aclonica hover:bg-yellow">
+                World of Artist //{" "}
               </button>
             </Link>
           </div>

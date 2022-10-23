@@ -68,7 +68,9 @@ const UploadPhoto = () => {
         <div className="relative z-8 bg-vividAuburn">
           <Navbar />
         </div>
+        <div className="relative">
         <Navbar2 />
+        </div>
       </div>
       <div className="bg-radial">
         <div className="py-8 px-8">

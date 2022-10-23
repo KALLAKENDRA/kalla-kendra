@@ -17,10 +17,10 @@ import UploadPhoto from "./components/UploadPhoto/UploadPhoto";
 import ViewDesignPage from "./components/ViewDesignPage/ViewDesignPage";
 import Slideshow from "./components/Slideshow/Slideshow";
 
+import Profile from "./components/Profile/Profile";
+
 function App() {
   return (
-    // <div className="App">
-
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/imageinfo" element={<ImageInfo />}></Route>
@@ -38,9 +38,8 @@ function App() {
       <Route path="/forgotPass" element={<ForgotPassword />}></Route>
       <Route path="/uploadphoto" element={<UploadPhoto />}></Route>
       <Route path="/viewdesignpage" element={<ViewDesignPage />}></Route>
+      <Route path="/profile" element={<Profile />}></Route>
     </Routes>
-
-    // </div>
   );
 }
 

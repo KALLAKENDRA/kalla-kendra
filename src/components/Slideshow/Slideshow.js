@@ -35,7 +35,7 @@ const Slideshow = () => {
         <img
           src={isImgm === 0 ? images[isImgm + 2].url : images[isImgm - 1].url}
           alt="shazam"
-          className="w-0 xl:w-56 h-40 my-auto "
+          className="w-0 xl:w-2/12 h-40 my-auto "
         />
         <div className="w-full flex md:flex w-7/12 gap-5">
           <svg
@@ -95,7 +95,7 @@ const Slideshow = () => {
               : images[isImgm + 1].url
           }
           alt="shazam"
-          className="w-0 xl:w-56 h-40 my-auto "
+          className="w-0 xl:w-2/12 h-40 my-auto "
         />
       </div>
       <div className="flex relative w-full">

@@ -20,7 +20,9 @@ const Discover = () => {
         <div className="relative z-8  bg-vividAuburn">
           <Navbar />
         </div>
+        <div className="relative">
         <Navbar2 />
+        </div>
       </div>
       <div className="bg-radial">
         <div className="mx-auto py-8 px-8">

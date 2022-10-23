@@ -1,328 +1,210 @@
-import React, { useState } from "react";
+import React from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
-// import JobNav from "./JobNav";
-const JobsList = [
-  {
-    id: 1,
-    Name: "Graphic design",
-    CompanyName: "CalciteX Cybernetics LLP",
-    description: "Work From Home/ Part time allowed",
-    StartDate: "Immediately",
-    Duration: "3 Months",
-    Type: "Internship",
-    Stipend: "3,000 /month",
-    ApplyBy: "11 Aug' 22",
-  },
-];
+
 
 const Jobs = () => {
-  const [openDrawer, setOpenDrawer] = useState(false);
-
-  const SideMenu = (
-    <div className="btn btn-circle xl:hidden">
-      {!openDrawer && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 btn btn-circle "
-          onClick={(e) => {
-            e.preventDefault();
-            setOpenDrawer(true);
-          }}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
-          />
-        </svg>
-      )}
-    </div>
-  );
-
-  const DrawerContent = ({ children }) => {
-    return (
-      <div className="bg-white w-10/12 h-full overflow-scroll justify-between font-mono transition-all p-4 absolute">
-        <button
-          className="btn btn-circle bg-error "
-          onClick={(e) => {
-            e.preventDefault();
-            setOpenDrawer(false);
-          }}
-        >
-          X
-        </button>
-        {children}
-      </div>
-    );
-  };
-
   const background = "https://i.ibb.co/3kvrMsr/Background.png";
   const homeicon = "https://i.ibb.co/d2HTqHm/homeicon.png";
 
-  const renderJobs = (JobsList || []).map((job) => {
-    return (
-      <div
-        key={job.id}
-        className="card relative w-full h-2/12 bg-base-100 shadow-xl p-6 rounded-none flex flex-col flex-wrap justify-between"
-      >
-        {openDrawer && (
-          <DrawerContent>
-            <div className="flex text-xl w-full text-center flex-col">
-              <div>
-                <h1 className="font-bold text-vividGreen">Start date</h1>
-                <h1 className="font-semibold">{job.StartDate}</h1>
-              </div>
-              <div>
-                <h1 className="font-bold text-vividGreen">Duration</h1>
-                <h1 className="font-semibold">{job.Duration}</h1>
-              </div>
-              <div>
-                <h1 className="font-bold text-vividGreen">Stipend</h1>
-                <h1 className="font-semibold">{job.ApplyBy}</h1>
-              </div>
-              <div>
-                <h1 className="font-bold text-vividGreen">Apply By</h1>
-                <h1 className="font-semibold">{job.ApplyBy}</h1>
-              </div>
-            </div>
-          </DrawerContent>
-        )}
-        {SideMenu}
-        <div className=" flex items-center justify-between mb-8 w-full flex-wrap">
-          <div>
-            <h1 className="font-bold text-2xl ">{job.Name}</h1>
-            <h1 className="font-semibold text-xl">{job.CompanyName}</h1>
-          </div>
-          <div>
-            <button className="btn bg-lightGrey rounded-full w-full text-black">
-              {job.Type}
-            </button>
-          </div>
-        </div>
-        <div className=" flex items-center justify-start font-bold pt-4 pb-4">
-          <div></div>
-          <div className="flex items-center">
-            <img src={homeicon} className="w-[20px] mr-2" alt="" />
-            <h1>{job.description}</h1>
-          </div>
-        </div>
-
-        <div className="hidden xl:flex pb-8 w-fit gap-36 justify-between flex-warp">
-          <div>
-            <h1 className="font-bold">Start date</h1>
-            <h1 className="font-semibold">{job.StartDate}</h1>
-          </div>
-          <div>
-            <h1 className="font-bold">Duration</h1>
-            <h1 className="font-semibold">{job.Duration}</h1>
-          </div>
-          <div>
-            <h1 className="font-bold">Stipend</h1>
-            <h1 className="font-semibold">{job.ApplyBy}</h1>
-          </div>
-          <div>
-            <h1 className="font-bold">Apply By</h1>
-            <h1 className="font-semibold">{job.ApplyBy}</h1>
-          </div>
-        </div>
-
-        <div className=" flex items-center justify-between flex-wrap">
-          <div className="flex justify-between w-fit h-fit text-vividGreen flex-wrap">
-            <a href="/jobs" className="">
-              View Details
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4 mt-auto flex "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </div>
-          <div>
-            <button className="bg-lightRose rounded-full py-1 px-10 font-semibold text-black duration-300	 hover:bg">
-              Apply
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  });
-
   return (
-    <div className="overflow-hidden">
-      <img
-        className="w-screen h-screen overflow-hidden fixed"
-        src={background}
-        alt=""
-      />
-      <div className="w-full md:w-11/12 mx-auto">
-        <div className="relative">
-          <Navbar3></Navbar3>
-        </div>
+    <>
+      <div className="top-0 absolute bg-cover">
+        <img className="w-screen h-screen" src={background} alt="" />
+      </div>
+      <div className="relative">
+        <Navbar3></Navbar3>
+      </div>
 
-        <div className="relative flex items-center justify-between mt-1 w-full mx-auto flex-wrap ">
-          <div className="btn-group flex flex-wrap justify-center">
-            <button className="btn  bg-darkRed">Part Time</button>
-            <button className="btn bg-darkRed">full Time</button>
-            <button className="btn bg-vividAuburn">Internship</button>
-          </div>
-          <div className="btn-group flex flex-wrap mx-auto">
-            <button className="btn bg-darkRed">
-              Location{" "}
-              <img className="text-white ml-2" src={locationIcon} alt="" />
-            </button>
-          </div>
-          <div className="btn-group flex flex-wrap mx-auto">
-            <button className="btn bg-vividAuburn">Remote</button>
-            <button className="btn bg-darkRed">In Office</button>
-          </div>
-          <div className="btn-group flex mx-auto">
-            <button className="btn bg-darkRed">Keywords</button>
-          </div>
-          <div className="btn-group flex flex-wrap ">
-            <div className="btn bg-darkRed flex">
-              <input
-                type="search"
-                className="bg-transparent h-full text-white font-sans  text-xl outline-none"
-                placeholder="Search"
-              />{" "}
-              <img className="text-white" src={searchIcon} alt="" />
-            </div>
-          </div>
+      <div className="relative flex items-center justify-around  mt-6 ">
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
+          <button class="btn  bg-darkRed">Part Time</button>
+          <button class="btn bg-darkRed">full Time</button>
+          <button class="btn bg-vividAuburn">Internship</button>
         </div>
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
+          <button class="btn bg-darkRed">
 
-        <div className="flex-nowrap md:flex w-full flex-row justify-between mt-1 mb-1 flex-wrap ">
-          <div className="dropdown md:hidden">
-            <label tabIndex={0} className="btn m-1">
-              Filters
+            Location{" "}
+            <img className="text-white ml-2" src={locationIcon} alt="" />
+          </button>
+        </div>
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
+          <button class="btn bg-vividAuburn">Remote</button>
+          <button class="btn bg-darkRed">In Office</button>
+        </div>
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
+          <button class="btn bg-darkRed">Keywords</button>
+        </div>
+        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
+          <button class="btn bg-darkRed">
+
+            Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div className="relative flex mobileLg:flex-col items-center justify-around mt-12">
+        <div className="bg-white p-24 font-semibold">
+          <div className=" flex items-center justify-start pb-4">
+            <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
+            <p>As Per My Preference</p>
+          </div>
+          <div class="form-control w-full max-w-xs pb-4">
+            <label class="label">
+              <span class="label-text">Categories</span>
             </label>
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <div className="z-10 bg-white p-5 font-semibold flex flex-col gap-12 h-full w-full">
-                  <div className="flex justify-between ">
-                    <input
-                      type="checkbox"
-                      className="checkbox bg-lightGrey rounded-none"
-                    />
-                    <p className="text-start w-4/5">As Per My Preference</p>
-                  </div>
-                  <div className="flex flex-col h-2/6 justify-between my-auto">
-                    <div className="flex flex-col  form-control w-full">
-                      <label className="label">
-                        <span className="label-text">Categories</span>
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Type here"
-                        className="input  w-full  bg-lightGrey rounded-none"
-                      />
-                    </div>
-                    <div className="flex flex-col form-control w-full">
-                      <label className="label">
-                        <span className="label-text ">Location</span>
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Type here"
-                        className="input w-full bg-lightGrey rounded-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-col w-full justify-between h-16 ">
-                    <div className="flex justify-between ">
-                      <input
-                        type="checkbox"
-                        className="checkbox bg-lightGrey rounded-none"
-                      />
-                      <p className="text-start w-4/5">Work from Home</p>
-                    </div>
-                    <div className=" flex justify-between">
-                      <input
-                        type="checkbox"
-                        className="checkbox bg-lightGrey rounded-none"
-                      />
-                      <p className="text-start w-4/5">Part Time</p>
-                    </div>
-                  </div>
-                  <button className="w-full text-end">Cancel</button>
+            <input
+              type="text"
+              placeholder="Type here"
+              class="input  w-full max-w-xs p-6  max-w-xs bg-lightGrey"
+            />
+          </div>
+          <div class="form-control w-full max-w-xs pb-4">
+            <label class="label">
+              <span class="label-text">Location</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              class="input  w-full p-6  max-w-xs bg-lightGrey"
+            />
+          </div>
+          <div className=" flex items-center justify-start pb-4">
+            <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
+            <p>Work From Home</p>
+          </div>
+          <div className=" flex items-center justify-start pb-4">
+            <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
+            <p>Part Time</p>
+          </div>
+          <div className=" flex items-center justify-end">
+            <p>Cancel</p>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div className="mb-12">
+            <div class="card w-full bg-base-100 shadow-xl p-6">
+              <div className=" flex items-center justify-between pb-6">
+                <div>
+                  <h1 className="font-bold text-2xl pb-2">Graphic Design</h1>
+                  <h1 className="font-semibold text-xl">
+                    CalciteX Cybarmetics LLp
+                  </h1>
                 </div>
-              </li>
-            </ul>
-          </div>
+                <div>
+                  <p className="btn bg-lightGrey text-black rounded-full px-2">
+                    Internship
+                  </p>
+                </div>
+              </div>
+              <div className=" flex items-center justify-start font-bold pt-4 pb-4">
+                <div></div>
+                <div className="flex items-center">
+                  <img src={homeicon} className="w-[20px] mr-2" alt="" />
+                  <h1>Work From Home/ Part time allowed</h1>
+                </div>
+              </div>
 
-          <div className="z-10 bg-white p-5 font-semibold flex flex-col gap-12 h-full w-4/12">
-            <div className="hidden md:flex justify-between ">
-              <input
-                type="checkbox"
-                className="checkbox bg-lightGrey rounded-none"
-              />
-              <p className="text-start w-4/5">As Per My Preference</p>
-            </div>
-            <div className="hidden md:flex flex-col h-2/6 justify-between my-auto">
-              <div className="flex flex-col  form-control w-full">
-                <label className="label">
-                  <span className="label-text">Categories</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input  w-full  bg-lightGrey rounded-none"
-                />
+              <div className="grid grid-cols-4 gap-4 pb-8">
+                <div>
+                  <h1 className="font-bold">Start date</h1>
+                  <h1 className="font-semibold">Immediately</h1>
+                </div>
+                <div>
+                  <h1 className="font-bold">Duration</h1>
+                  <h1 className="font-semibold">3 Months</h1>
+                </div>
+                <div>
+                  <h1 className="font-bold">Stipend</h1>
+                  <h1 className="font-semibold">3000/Per Month</h1>
+                </div>
+                <div>
+                  <h1 className="font-bold">Apply By</h1>
+                  <h1 className="font-semibold">11 Aug, 2022</h1>
+                </div>
               </div>
-              <div className="flex flex-col form-control w-full">
-                <label className="label">
-                  <span className="label-text ">Location</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input w-full bg-lightGrey rounded-none"
-                />
-              </div>
-            </div>
-            <div className="hidden md:flex flex-col w-full justify-between h-16 ">
-              <div className="flex justify-between ">
-                <input
-                  type="checkbox"
-                  className="checkbox bg-lightGrey rounded-none"
-                />
-                <p className="text-start w-4/5">Work from Home</p>
-              </div>
-              <div className=" flex justify-between">
-                <input
-                  type="checkbox"
-                  className="checkbox bg-lightGrey rounded-none"
-                />
-                <p className="text-start w-4/5">Part Time</p>
-              </div>
-            </div>
-            <button className="hidden xl:w-full text-end">Cancel</button>
-          </div>
 
-          <div className=" flex flex-col h-full gap-2">
-            {renderJobs}
-            {renderJobs}
+              <div className=" flex items-center justify-between">
+                <div>
+                  <a
+                    href=""
+                    className="underline underline-offset-1 text-vividGreen"
+                  >
+                    View Details
+                  </a>
+                </div>
+                <div>
+                  <button className="bg-lightRose rounded-full px-2 py-1 text-black">
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card w-full bg-base-100 shadow-xl p-6">
+              <div className=" flex items-center justify-between pb-6">
+                <div>
+                  <h1 className="font-bold text-2xl pb-2">Graphic Design</h1>
+                  <h1 className="font-semibold text-xl">
+                    CalciteX Cybarmetics LLp
+                  </h1>
+                </div>
+                <div>
+                  <button className="btn bg-lightGrey rounded-full px-2 text-black">
+                    Internship
+                  </button>
+                </div>
+              </div>
+              <div className=" flex items-center justify-start font-bold pt-4 pb-4">
+                <div></div>
+                <div className="flex items-center">
+                  <img src={homeicon} className="w-[20px] mr-2" alt="" />
+                  <h1>Work From Home/ Part time allowed</h1>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-4 pb-8">
+                <div>
+                  <h1 className="font-bold">Start date</h1>
+                  <h1 className="font-semibold">Immediately</h1>
+                </div>
+                <div>
+                  <h1 className="font-bold">Duration</h1>
+                  <h1 className="font-semibold">3 Months</h1>
+                </div>
+                <div>
+                  <h1 className="font-bold">Stipend</h1>
+                  <h1 className="font-semibold">3000/Per Month</h1>
+                </div>
+                <div>
+                  <h1 className="font-bold">Apply By</h1>
+                  <h1 className="font-semibold">11 Aug, 2022</h1>
+                </div>
+              </div>
+
+              <div className=" flex items-center justify-between">
+                <div>
+                  <a
+                    href=""
+                    className="underline underline-offset-1 text-vividGreen"
+                  >
+                    View Details
+                  </a>
+                </div>
+                <div>
+                  <button className="bg-lightRose rounded-full px-2 py-1 text-black">
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
