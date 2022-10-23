@@ -6,44 +6,28 @@ const Navbar3 = () => {
   const activeLink =
     "text-black font-bold bg-aquaHaze  shadow-2xl rounded-full px-3 py-2";
   const normalLink = "font-bold text-white";
+
   return (
-    <>
-     <div className="flex flex-col  items-center justify-around">
-        
-        <div className="relative z-10">
+    <div className="flex bg-darkRed ">
+      <div className="flex  w-5/12 justify-between pl-3 text-white ">
+        <div className="">
           <Link to="/">
-           
             <Logo1 />
           </Link>
         </div>
-        <div className="flex gap-6">
-          <div>
-            <NavLink
-              to="/discover"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Discover
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/livestreams"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Livestreams
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/jobs"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Jobs
-            </NavLink>
-          </div>
+
+        <Link to="/discover" className=" m-auto">
+          Discover
+        </Link>
+
+        <NavLink to="/livestreams" className="m-auto">
+          Livestreams
+        </NavLink>
+        <div className="shadow-black shadow-md block bg-darkRed m-auto pl-6 pb-2 pt-2 pr-6  rounded-2xl ">
+          <NavLink to="/jobs">Jobs</NavLink>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -3,7 +3,6 @@ import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
 
-
 const Jobs = () => {
   const background = "https://i.ibb.co/3kvrMsr/Background.png";
   const homeicon = "https://i.ibb.co/d2HTqHm/homeicon.png";
@@ -17,31 +16,34 @@ const Jobs = () => {
         <Navbar3></Navbar3>
       </div>
 
-      <div className="relative flex items-center justify-around  mt-6 ">
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn  bg-darkRed">Part Time</button>
-          <button class="btn bg-darkRed">full Time</button>
-          <button class="btn bg-vividAuburn">Internship</button>
+      <div className="relative flex items-center justify-around mt-6">
+        <div class="btn-group  ">
+          <button class="btn  bg-darkRed border-0">Part Time</button>
+          <button class="btn bg-darkRed border-0">full Time</button>
+          <button class="btn bg-vividAuburn border-0">Internship</button>
         </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-darkRed">
-
+        <div class="btn-group">
+          <button class="btn bg-darkRed border-0">
             Location{" "}
             <img className="text-white ml-2" src={locationIcon} alt="" />
           </button>
         </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-vividAuburn">Remote</button>
-          <button class="btn bg-darkRed">In Office</button>
+        <div class="btn-group ">
+          <button class="btn bg-vividAuburn border-0">Remote</button>
+          <button class="btn bg-darkRed border-0">In Office</button>
         </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-darkRed">Keywords</button>
+        <div class="btn-group ">
+          <button class="btn bg-darkRed border-0">Keywords</button>
         </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-darkRed">
-
-            Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
-          </button>
+        <div class="btn-group">
+          <div class="btn bg-darkRed border-0 w-fit">
+            <input
+              type="search"
+              placeholder="Search"
+              className="bg-transparent outline-none"
+            />
+            <img className="text-white ml-2" src={searchIcon} alt="" />
+          </div>
         </div>
       </div>
 
