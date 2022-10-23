@@ -10,13 +10,13 @@ import Jobs from './components/Jobs/Jobs';
 import Livestreams from './components/Livestreams/Livestreams';
 import ForgotPassword from './components/Login/ForgotPassword/ForgotPassword';
 import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
 import SignUp from './components/SignUp/SignUp';
+import Slideshow from './components/Slideshow/Slideshow';
 import StartYourJourny from './components/StartYourJourny/StartYourJourny';
 import Upload from './components/Upload/Upload';
 import UploadPhoto from './components/UploadPhoto/UploadPhoto';
 import ViewDesignPage from './components/ViewDesignPage/ViewDesignPage';
-import Slideshow from './components/Slideshow/Slideshow';
-import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
         <Route path='/livestreams' element={<Livestreams />}></Route>
         <Route path='/jobs' element={<Jobs />}></Route>
         <Route path='/forgotPass' element={<ForgotPassword />}></Route>
-        <Route path='/uploadphoto' element={<UploadPhoto />}></Route>
+        <Route path='/category' element={<UploadPhoto />}></Route>
         <Route path='/viewdesignpage' element={<ViewDesignPage />}></Route>
         <Route path='/profile' element={<Profile/>}></Route>
       </Routes>
