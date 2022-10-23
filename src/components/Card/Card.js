@@ -1,12 +1,12 @@
 import React from 'react';
 
-import modernArt1 from "../../Assets/modern-art/modern3.jpg";
-import modernArt2 from "../../Assets/modern-art/traditional2.jpg";
-import modernArt3 from "../../Assets/modern-art/graphic.jpg";
-import modernArt4 from "../../Assets/modern-art/ui-ux.jpg";
-import modernArt5 from "../../Assets/modern-art/singing.jpg";
-import modernArt6 from "../../Assets/modern-art/danching.jpg";
 import { Link } from 'react-router-dom';
+import modernArt6 from "../../Assets/modern-art/danching.jpg";
+import modernArt3 from "../../Assets/modern-art/graphic.jpg";
+import modernArt1 from "../../Assets/modern-art/modern3.jpg";
+import modernArt5 from "../../Assets/modern-art/singing.jpg";
+import modernArt2 from "../../Assets/modern-art/traditional2.jpg";
+import modernArt4 from "../../Assets/modern-art/ui-ux.jpg";
 
 const Card = ({card}) => {
     const {img, button, name} = card;
@@ -29,7 +29,7 @@ const Card = ({card}) => {
                     <img alt='' className="-ml-5 w-8 rounded-full" src={modernArt6} />
                 </div>
                 <div className="flex items-center">
-                  <Link to='/uploadphoto'><button className=' bg-lightRose text-black hover:bg-azure hover:text-white px-8 h-8 rounded-2xl'>{button}</button></Link>
+                  <Link to='/category'><button className=' bg-lightRose text-black hover:bg-azure hover:text-white px-8 h-8 rounded-2xl'>{button}</button></Link>
                 </div>
               </div>
             </div>

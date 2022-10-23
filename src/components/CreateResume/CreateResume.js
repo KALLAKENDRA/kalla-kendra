@@ -330,7 +330,6 @@ const CreateResume = () => {
               /> */}
 
               <button className=" rounded-lg mt-12 mb-2 h-8 w-44 bg-rosewood text-white text-xs  hover:bg-azure">
-                {" "}
                 <Link to="/upload">Upload photo</Link>
               </button>
 
