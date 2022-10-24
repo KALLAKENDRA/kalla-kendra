@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar3 from "../Shared/Navbar/Navbar3";
+import { Link } from "react-router-dom";
 import bgCorner from "../../Assets/startjourneyp1.png";
-import bghome from "../../Assets/bghome.png";
+import Navbar3 from "../Shared/Navbar/Navbar3";
 
 const imgList = [
   {
@@ -146,7 +146,7 @@ const Profile = () => {
             <div className="grid  lg:grid-cols-3 grid-cols-1 mt-8">
               {imgList.map((image) => (
                 <div className="mr-4 mobileMd:mr-0 mobileLg:mr-0 mb-4">
-                  <img className="shadow-lg h-48 w-54" src={image.img} alt="" />
+                  <Link to='/imageinfo'><img className="shadow-lg h-48 w-54" src={image.img} alt="" /></Link>
                 </div>
               ))}
             </div>
