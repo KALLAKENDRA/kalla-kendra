@@ -8,8 +8,8 @@ const Navbar3 = () => {
   const normalLink = "font-bold text-white";
 
   return (
-    <div className="flex bg-darkRed ">
-      <div className="flex  w-5/12 justify-between pl-3 text-white ">
+    <div className="flex ">
+      <div className="flex justify-between pl-3 text-white w-full xl:w-6/12">
         <div className="">
           <Link to="/">
             <Logo1 />

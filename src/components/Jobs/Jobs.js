@@ -29,7 +29,7 @@ const Jobs = () => {
           <h1 className="font-semibold text-xl">{job.Company}</h1>
         </div>
         <div>
-          <button className="btn bg-lightGrey rounded-full px-2 text-black">
+          <button className="btn bg-lightGrey rounded-full pr-4 pl-4 text-black font-bold border-0">
             {job.type}
           </button>
         </div>
@@ -68,7 +68,7 @@ const Jobs = () => {
           </a>
         </div>
         <div>
-          <button className="bg-lightRose rounded-full pl-4 pr-4 text-black font-bold">
+          <button className="bg-lightRose rounded-full pl-4 pr-4 pb-1 text-black font-bold">
             Apply
           </button>
         </div>
@@ -77,12 +77,15 @@ const Jobs = () => {
   ));
 
   return (
-    <>
-      <div className=" bg-cover">
-        <img className="w-screen h-screen fixed " src={background} alt="" />
-      </div>
+    <div className=" overflow-hidden">
+      <img
+        className="w-screen h-screen  bg-cover fixed"
+        src={background}
+        alt=""
+      />
+
       <div className="relative">
-        <Navbar3></Navbar3>
+        <Navbar3 />
       </div>
       <div className="w-10/12 m-auto mt-3">
         <div className="relative flex items-center justify-between mt-4 flex-wrap">
@@ -165,13 +168,13 @@ const Jobs = () => {
               <p>Cancel</p>
             </div>
           </div>
-          <div className="flex flex-col h-full justify-between gap-2 mb-2">
+          <div className="m-auto flex gap-2  xl:flex flex-col h-full justify-between gap-2 mb-2">
             {renderResult}
             {renderResult}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
