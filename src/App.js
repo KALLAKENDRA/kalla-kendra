@@ -3,9 +3,7 @@ import "./App.css";
 import CreateResume from "./components/CreateResume/CreateResume";
 import Discover from "./components/Discover/Discover";
 import Home from "./components/Home/Home";
-
 import ImageInfo from "./components/ImageInfo/ImageInfo";
-
 import Jobs from "./components/Jobs/Jobs";
 import Livestreams from "./components/Livestreams/Livestreams";
 import ForgotPassword from "./components/Login/ForgotPassword/ForgotPassword";
@@ -42,5 +40,4 @@ function App() {
     </Routes>
   );
 }
-
 export default App;

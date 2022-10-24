@@ -79,7 +79,7 @@ const Jobs = () => {
   return (
     <>
       <div className=" bg-cover">
-        <img className="w-screen h-screen fixed " src={background} alt=""/>
+        <img className="w-screen h-screen fixed " src={background} alt="" />
       </div>
       <div className="relative">
         <Navbar3></Navbar3>
