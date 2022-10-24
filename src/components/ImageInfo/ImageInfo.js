@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import mainImage from "../../Assets/Image-Info/Frist-Show.png";
+import bannerIamge from "../../Assets/Image-Info/ImageInfoBanner.png";
 import { imageInfoData } from '../Data/ImageInfo';
-import bannerIamge from "../../Assets/Image-Info/ImageInfoBanner.png"
-import mainImage from "../../Assets/Image-Info/Frist-Show.png"
 import BottomSliderInfo from './BottomSliderInfo';
 const ImageInfo = () => {
   return (
@@ -17,7 +18,7 @@ const ImageInfo = () => {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
           <div className="sm:flex sm:justify-center sm:items-center">
             <div className="sm:mb-6 mx-auto sm:p-0 p-2">
-              <img src={mainImage} alt="" className="lg:w-full lg:h-full" />
+              <Link to='/slideshow'><img src={mainImage} alt="" className="lg:w-full lg:h-full" /></Link>
               <div className="flex justify-between items-center">
                 <h5 className="font-bold font-inter  not-italic text-lg text-white text-left my-3">Mordern Art</h5>
                 <div className="flex justify-between items-center">
