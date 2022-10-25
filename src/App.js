@@ -34,7 +34,7 @@ function App() {
       <Route path="/livestreams" element={<Livestreams />}></Route>
       <Route path="/jobs" element={<Jobs />}></Route>
       <Route path="/forgotPass" element={<ForgotPassword />}></Route>
-      <Route path="/uploadphoto" element={<UploadPhoto />}></Route>
+      <Route path='/category' element={<UploadPhoto />}></Route>
       <Route path="/viewdesignpage" element={<ViewDesignPage />}></Route>
       <Route path="/profile" element={<Profile />}></Route>
     </Routes>

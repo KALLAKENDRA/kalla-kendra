@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
@@ -18,13 +18,25 @@ const interships = [
 ];
 
 const Jobs = () => {
+  const [type, setType] = useState("Internship");
+  const [categories, setCategories] = useState("Remote");
+  const [Jobs, setJobs] = useState();
+
   const background = "https://i.ibb.co/3kvrMsr/Background.png";
   const homeicon = "https://i.ibb.co/d2HTqHm/homeicon.png";
 
-  const renderResult = interships.map((job) => (
-    <div class="card w-full bg-base-100 shadow-xl p-5 rounded-none">
-      <div className="flex items-center justify-between pb-4 ">
-        <div>
+  useEffect(() => {
+    console.log(interships.filter((e) => e.type === type));
+    setJobs(interships.filter((e) => e.type === type));
+  }, [type]);
+
+  const renderResult = (Jobs || []).map((job) => (
+    <div
+      key={job.id}
+      className="card w-full bg-base-100 shadow-xl p-5 rounded-none"
+    >
+      <div className="flex items-center justify-between pb-4 flex-wrap">
+        <div className="flex flex-wrap">
           <h1 className="font-bold text-2xl pb-2">{job.Duration}</h1>
           <h1 className="font-semibold text-xl">{job.Company}</h1>
         </div>
@@ -42,7 +54,7 @@ const Jobs = () => {
         </div>
       </div>
 
-      <div className="flex gap-28 pb-8 w-full justify-between">
+      <div className="hidden md:flex gap-28 pb-8 w-full justify-between">
         <div>
           <h1 className="font-bold">Start date</h1>
           <h1 className="font-semibold">{job.StartDate}</h1>
@@ -90,9 +102,36 @@ const Jobs = () => {
       <div className="w-10/12 m-auto mt-3">
         <div className="relative flex items-center justify-between mt-4 flex-wrap">
           <div className="btn-group flex flex-wrap">
-            <button className="btn  bg-darkRed border-0">Part Time</button>
-            <button className="btn bg-darkRed border-0">full Time</button>
-            <button className="btn bg-vividAuburn border-0">Internship</button>
+            <button
+              className={`btn  ${
+                type === "PartTime" ? "bg-vividAuburn" : "bg-darkRed"
+              } border-0`}
+              onClick={(e) => {
+                setType("PartTime");
+              }}
+            >
+              Part Time
+            </button>
+            <button
+              className={`btn ${
+                type === "FullTime" ? "bg-vividAuburn" : "bg-darkRed"
+              } border-0`}
+              onClick={(e) => {
+                setType("FullTime");
+              }}
+            >
+              full Time
+            </button>
+            <button
+              className={`btn ${
+                type === "Internship" ? "bg-vividAuburn" : "bg-darkRed"
+              } border-0`}
+              onClick={(e) => {
+                setType("Internship");
+              }}
+            >
+              Internship
+            </button>
           </div>
           <div className="btn-group flex flex-wrap">
             <button className="btn bg-darkRed border-0">
@@ -101,8 +140,26 @@ const Jobs = () => {
             </button>
           </div>
           <div className="btn-group flex flex-wrap">
-            <button className="btn bg-vividAuburn border-0">Remote</button>
-            <button className="btn bg-darkRed border-0">In Office</button>
+            <button
+              className={`btn ${
+                categories === "Remote" ? "bg-vividAuburn" : "bg-darkRed"
+              } border-0`}
+              onClick={(e) => {
+                setCategories("Remote");
+              }}
+            >
+              Remote
+            </button>
+            <button
+              className={`btn ${
+                categories === "Inoffice" ? "bg-vividAuburn" : "bg-darkRed"
+              } border-0`}
+              onClick={(e) => {
+                setCategories("Inoffice");
+              }}
+            >
+              In Office
+            </button>
           </div>
           <div className="btn-group ">
             <button className="btn bg-darkRed border-0">Keywords</button>
@@ -128,19 +185,19 @@ const Jobs = () => {
               />
               <p>As Per My Preference</p>
             </div>
-            <div class="form-control w-full ">
-              <label class="label">
-                <span class="label-text">Categories</span>
+            <div className="form-control w-full ">
+              <label className="label">
+                <span className="label-text">Categories</span>
               </label>
               <input
                 type="text"
                 placeholder="Type here"
-                class="input  w-full  bg-lightGrey rounded-none"
+                className="input  w-full  bg-lightGrey rounded-none"
               />
             </div>
-            <div class="form-control w-full  pb-4">
-              <label class="label">
-                <span class="label-text">Location</span>
+            <div className="form-control w-full  pb-4">
+              <label className="label">
+                <span className="label-text">Location</span>
               </label>
               <input
                 type="text"
@@ -159,7 +216,7 @@ const Jobs = () => {
               <div className=" flex items-center justify-start pb-4 gap-2">
                 <input
                   type="checkbox"
-                  class="checkbox bg-lightGrey rounded-none w-4 h-4 my-auto"
+                  className="checkbox bg-lightGrey rounded-none w-4 h-4 my-auto"
                 />
                 <p>Part Time</p>
               </div>
@@ -168,9 +225,18 @@ const Jobs = () => {
               <p>Cancel</p>
             </div>
           </div>
+
+          {(Jobs || []).length === 0 && (
+            <div className="font-acme text-4xl w-full flex">
+              <h3 className="text-center m-auto bg-white w-fit p-4 rounded-xl">
+                No results Found
+              </h3>
+            </div>
+          )}
+
           <div className="m-auto flex gap-2  xl:flex flex-col h-full justify-between gap-2 mb-2">
-            {renderResult}
-            {renderResult}
+            {Jobs && renderResult}
+            {Jobs && renderResult}
           </div>
         </div>
       </div>
