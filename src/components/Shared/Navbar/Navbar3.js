@@ -8,11 +8,11 @@ const Navbar3 = () => {
   const normalLink = "font-bold text-white";
   return (
     <>
-     <div className="flex flex-col  items-center justify-around">
-        
+      <div className="flex   items-center justify-around">
+
         <div className="relative z-10">
           <Link to="/">
-           
+
             <Logo1 />
           </Link>
         </div>
