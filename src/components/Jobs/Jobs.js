@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
-import Navbar3 from "../Shared/Navbar/Navbar3";
+import Navbar from "../Shared/Navbar/Navbar";
+
 
 
 const Jobs = () => {
@@ -19,8 +20,8 @@ const Jobs = () => {
       <div className="top-0 absolute bg-cover">
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
-      <div className='relative bg-gradient-to-r from-[#8D0301] to-[#640000]'>
-        <Navbar3 />
+      <div className="relative">
+        <Navbar></Navbar>
       </div>
 
       <div className="flex overflow-x-hidden items-center justify-center">
@@ -117,7 +118,7 @@ const Jobs = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-4 mobileMd:grid-cols-2 mobileLg:grid-cols-2 gap-4 pb-8">
+              <div className="grid desktopLg:grid-cols-4 desktopMd:grid-cols-4 desktopSm:grid-cols-4 laptopLg:grid-cols-4 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-1 mobileMd:grid-cols-2 mobileLg:grid-cols-2 gap-4 pb-8">
                 <div>
                   <h1 className="font-bold">Start date</h1>
                   <h1 className="font-semibold">Immediately</h1>
