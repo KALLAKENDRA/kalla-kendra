@@ -104,7 +104,7 @@ const Jobs = () => {
                   </h1></Link>
                 </div>
                 <div>
-                  <p className="btn bg-lightGrey text-black rounded-full px-2">
+                  <p className="btn bg-lightGrey text-black  hover:text-white rounded-full px-2">
                     Internship
                   </p>
                 </div>
@@ -163,7 +163,7 @@ const Jobs = () => {
                   </h1>
                 </div>
                 <div>
-                  <button className="btn bg-lightGrey rounded-full px-2 text-black">
+                  <button className="btn bg-lightGrey hover:text-white rounded-full px-2 text-black">
                     Internship
                   </button>
                 </div>
