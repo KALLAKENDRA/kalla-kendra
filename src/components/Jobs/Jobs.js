@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
-import Navbar3 from "../Shared/Navbar/Navbar3";
+import Navbar from "../Shared/Navbar/Navbar";
+
 
 
 const Jobs = () => {
@@ -11,77 +12,86 @@ const Jobs = () => {
 
   return (
     <>
+
+      <div className="top-0 absolute bg-cover">
+        <img className="w-screen h-screen" src={background} alt="" />
+      </div>
+
       <div className="top-0 absolute bg-cover">
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
       <div className="relative">
-        <Navbar3></Navbar3>
+        <Navbar></Navbar>
       </div>
 
-      <div className="relative flex items-center justify-around  mt-6 ">
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn  bg-darkRed">Part Time</button>
-          <button class="btn bg-darkRed">full Time</button>
-          <button class="btn bg-vividAuburn">Internship</button>
-        </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-darkRed">
+      <div className="flex overflow-x-hidden items-center justify-center">
+        <div className="relative  grid desktopLg:grid-cols-5 desktopMd:grid-cols-5 desktopSm:grid-cols-5 laptopLg:grid-cols-5 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-1 mobileMd:grid-cols-1 mobileLg:grid-cols-1  gap-12   mt-6 ">
+          <div class="btn-group ">
+            <button class="btn  bg-darkRed">Part Time</button>
+            <button class="btn bg-darkRed">full Time</button>
+            <button class="btn bg-vividAuburn">Internship</button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-darkRed">
 
-            Location{" "}
-            <img className="text-white ml-2" src={locationIcon} alt="" />
-          </button>
-        </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-vividAuburn">Remote</button>
-          <button class="btn bg-darkRed">In Office</button>
-        </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-darkRed">Keywords</button>
-        </div>
-        <div class="btn-group desktopLg:mx-6 desktopMd:mx-6 desktopSm:mx-6 laptopLg:mx-4 laptopMd:mx-4 laptopSm:mx-4 tablet:mx-2 mobileLg:mx-1 mobileMd:mx-1">
-          <button class="btn bg-darkRed">
+              Location{" "}
+              <img className="text-white ml-2" src={locationIcon} alt="" />
+            </button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-vividAuburn">Remote</button>
+            <button class="btn bg-darkRed">In Office</button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-darkRed">Keywords</button>
+          </div>
+          <div class="btn-group ">
+            <button class="btn bg-darkRed">
 
-            Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
-          </button>
+              Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
+            </button>
+          </div>
         </div>
+
       </div>
-
-      <div className="relative flex mobileLg:flex-col items-center justify-around mt-12">
-        <div className="bg-white p-24 font-semibold">
-          <div className=" flex items-center justify-start pb-4">
-            <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
-            <p>As Per My Preference</p>
-          </div>
-          <div class="form-control w-full max-w-xs pb-4">
-            <label class="label">
-              <span class="label-text">Categories</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Type here"
-              class="input  w-full max-w-xs p-6  max-w-xs bg-lightGrey"
-            />
-          </div>
-          <div class="form-control w-full max-w-xs pb-4">
-            <label class="label">
-              <span class="label-text">Location</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Type here"
-              class="input  w-full p-6  max-w-xs bg-lightGrey"
-            />
-          </div>
-          <div className=" flex items-center justify-start pb-4">
-            <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
-            <p>Work From Home</p>
-          </div>
-          <div className=" flex items-center justify-start pb-4">
-            <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
-            <p>Part Time</p>
-          </div>
-          <div className=" flex items-center justify-end">
-            <p>Cancel</p>
+      <div className="relative overflow-x-hidden grid desktopLg:grid-cols-2 desktopMd:grid-cols-2 desktopSm:grid-cols-2 laptopLg:grid-cols-2 laptopMd:grid-cols-1 laptopSm:grid-cols-1 tablet:grid-cols-1 mobileLg:grid-cols-1 mobileMd:grid-cols-1 gap-24 mt-12 ml-2 mr-2">
+        <div className=" font-semibold  flex items-center justify-center">
+          <div className="w-full desktopLg:w-1/2 desktopMd:w-1/2 desktopSm:w-1/2 tablet:w-full mobileLg:w-full mobileMd:w-full bg-white p-24 ">
+            <div className=" flex items-center justify-start pb-4">
+              <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
+              <p>As Per My Preference</p>
+            </div>
+            <div class="form-control w-full max-w-xs pb-4">
+              <label class="label">
+                <span class="label-text">Categories</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Type here"
+                class="input  w-full max-w-xs p-6  max-w-xs bg-lightGrey"
+              />
+            </div>
+            <div class="form-control w-full max-w-xs pb-4">
+              <label class="label">
+                <span class="label-text">Location</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Type here"
+                class="input  w-full p-6  max-w-xs bg-lightGrey"
+              />
+            </div>
+            <div className=" flex items-center justify-start pb-4">
+              <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
+              <p>Work From Home</p>
+            </div>
+            <div className=" flex items-center justify-start pb-4">
+              <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
+              <p>Part Time</p>
+            </div>
+            <div className=" flex items-center justify-end">
+              <p>Cancel</p>
+            </div>
           </div>
         </div>
         <div className="flex flex-col">
@@ -95,7 +105,7 @@ const Jobs = () => {
                   </h1></Link>
                 </div>
                 <div>
-                  <p className="btn bg-lightGrey text-black rounded-full px-2">
+                  <p className="btn bg-lightGrey text-black  hover:text-white rounded-full px-2">
                     Internship
                   </p>
                 </div>
@@ -108,7 +118,7 @@ const Jobs = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-4 gap-4 pb-8">
+              <div className="grid desktopLg:grid-cols-4 desktopMd:grid-cols-4 desktopSm:grid-cols-4 laptopLg:grid-cols-4 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-1 mobileMd:grid-cols-2 mobileLg:grid-cols-2 gap-4 pb-8">
                 <div>
                   <h1 className="font-bold">Start date</h1>
                   <h1 className="font-semibold">Immediately</h1>
@@ -154,7 +164,7 @@ const Jobs = () => {
                   </h1>
                 </div>
                 <div>
-                  <button className="btn bg-lightGrey rounded-full px-2 text-black">
+                  <button className="btn bg-lightGrey hover:text-white rounded-full px-2 text-black">
                     Internship
                   </button>
                 </div>
@@ -205,8 +215,14 @@ const Jobs = () => {
           </div>
         </div>
       </div>
+
+
     </>
-  );
-};
+  )
+
+
+}
 
 export default Jobs;
+
+
