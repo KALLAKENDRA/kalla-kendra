@@ -1,8 +1,10 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink, useParams } from "react-router-dom";
 import Logo1 from "../../../Assets/svg/Logo1";
 
 const Navbar3 = () => {
+  const [isActive, setIsActive] = useState("");
+
   const activeLink =
     "text-black font-bold bg-aquaHaze  shadow-2xl rounded-full px-3 py-2";
   const normalLink = "font-bold text-white";
@@ -23,10 +25,12 @@ const Navbar3 = () => {
         <NavLink to="/livestreams" className="m-auto">
           Livestreams
         </NavLink>
-        <div className="shadow-black shadow-md block bg-darkRed m-auto pl-6 pb-2 pt-2 pr-6 justify-between rounded-2xl flex md:w-1/6 ">
-          <Link to="/jobs" className="m-auto ">
+        <div 
+        className="w-fit md:shadow-black shadow-md block bg-darkRed m-auto pl-6 pb-2 pt-2 pr-6 justify-between rounded-2xl flex w-1/6 "
+        >
+          <NavLink to="/jobs" className="m-auto ">
             Jobs
-          </Link>
+          </NavLink>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
