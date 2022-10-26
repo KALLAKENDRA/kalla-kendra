@@ -3,13 +3,11 @@ import React from 'react';
 import bgCorner1 from "../../../Assets/bgCorner1.png";
 import bgCorner2 from "../../../Assets/bgCorner2.png";
 import bghome from "../../../Assets/bghome.png";
-import Navbar3 from '../../Shared/Navbar/Navbar3';
+
 const ForgotPassword = () => {
     return (
         <>
-            <div className='relative'>
-                <Navbar3></Navbar3>
-            </div>
+
             <div className="absolute bg-cover">
                 <img className="w-screen h-screen" src={bghome} alt="" />
                 <img className="w-60  flex absolute left-0 top-0" src={bgCorner2} alt="" />
