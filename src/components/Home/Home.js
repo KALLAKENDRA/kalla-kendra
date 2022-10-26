@@ -26,7 +26,7 @@ const Home = () => {
           </h1>
           <Link to="/startyourjourny">
             <button className="w-40 h-10 bg-lightRose rounded-full text-iridium text-base font-aclonica hover:bg-yellow">
-              World of Artist //{" "}
+              World of Artist
             </button>
           </Link>
         </div>
@@ -36,6 +36,7 @@ const Home = () => {
       <img className="w-2/12 h-2/4" src={speaker1} alt="speaker" />
       <img className="w-2/12 h-2/4" src={guitarist1} alt="speaker" />
       <img className="w-2/12 h-2/4" src={Painter1} alt="speaker" />
+      <img className="w-2/12 h-2/4" src={photographer1} alt="photographer1" />
       <img className="w-2/12 h-2/4" src={Singer1} alt="speaker" />
       </div>
       </div>

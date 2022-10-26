@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import locationIcon from "../../Assets/locationIcon.png";
 import searchIcon from "../../Assets/searchicon.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
-
 
 
 const Jobs = () => {
@@ -15,18 +15,12 @@ const Jobs = () => {
       <div className="top-0 absolute bg-cover">
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
+
       <div className="top-0 absolute bg-cover">
         <img className="w-screen h-screen" src={background} alt="" />
       </div>
-      <div className="relative bg-vividAuburn overflow-x-hidden">
-
-        <div className="relative">
-
-
-          <Navbar3></Navbar3>
-
-        </div>
-
+      <div className='relative bg-gradient-to-r from-[#8D0301] to-[#640000]'>
+        <Navbar3 />
       </div>
 
       <div className="flex overflow-x-hidden items-center justify-center">
@@ -105,9 +99,9 @@ const Jobs = () => {
               <div className=" flex items-center justify-between pb-6">
                 <div>
                   <h1 className="font-bold text-2xl pb-2">Graphic Design</h1>
-                  <h1 className="font-semibold text-xl">
+                  <Link to='/profile'><h1 className="font-semibold text-xl">
                     CalciteX Cybarmetics LLp
-                  </h1>
+                  </h1></Link>
                 </div>
                 <div>
                   <p className="btn bg-lightGrey text-black rounded-full px-2">
