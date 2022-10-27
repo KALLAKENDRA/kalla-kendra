@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar3 from "../Shared/Navbar/Navbar3";
+import { Link } from "react-router-dom";
 import bgCorner from "../../Assets/startjourneyp1.png";
-import bghome from "../../Assets/bghome.png";
+import Navbar3 from "../Shared/Navbar/Navbar3";
 
 const imgList = [
   {
@@ -51,18 +51,17 @@ const imgList = [
 const Profile = () => {
   return (
     <div>
-        <div className=" bg-radial top-0">
-            
-            <div className="relative">
-                <Navbar3/>
-            </div>
-            <img
-            className="w-60  flex absolute left-0 -bottom-1"
-            src={bgCorner}
-            alt=""
-          />
+      <div className=" bg-radial top-0">
+        <div className="relative">
+          <Navbar3 />
+        </div>
+        <img
+          className="w-60  flex absolute left-0 -bottom-1"
+          src={bgCorner}
+          alt=""
+        />
 
-            <div className="relative flex laptopMd:flex-row tablet:flex-row tablet:items-start laptopLg:justify-evenly flex-col mobileMd:items-center mobileLg:items-center mt-9 pb-8">
+        <div className="relative flex laptopMd:flex-row tablet:flex-row tablet:items-start laptopLg:justify-evenly flex-col mobileMd:items-center mobileLg:items-center mt-9 pb-8">
           {/* Profile start */}
           <div className="w-54 lg:ml-16 tablet:ml-6 laptopSm:53">
             <div className="bg-lightGrey bg-opacity-30 pb-8 mb-6">
@@ -74,7 +73,9 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <h2 className="font-semibold text-white text-lg">Rajeev Barma</h2>
+                <h2 className="font-semibold text-white text-lg">
+                  Rajeev Barma
+                </h2>
                 <h4 className="font-thin text-white">Modern artist</h4>
                 <a className="font-thin underline	text-white" href="/">
                   www.rajeev347@gmail.com
@@ -146,15 +147,20 @@ const Profile = () => {
             <div className="grid  lg:grid-cols-3 grid-cols-1 mt-8">
               {imgList.map((image) => (
                 <div className="laptopLg:mr-4 laptopSm:mr-4 mobileMd:mr-0 mobileLg:mr-0 mb-4">
-                  <img className="shadow-lg h-48 w-54" src={image.img} alt="" />
+                  <Link to="/imageinfo">
+                    <img
+                      className="shadow-lg h-48 w-54"
+                      src={image.img}
+                      alt=""
+                    />
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
           {/* Image card end */}
         </div>
-
-        </div>
+      </div>
     </div>
   );
 };

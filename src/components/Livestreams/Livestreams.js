@@ -47,7 +47,7 @@ const Livestreams = () => {
                   <img class="inline-block h-12 w-12 border-none rounded-full" src="https://s3-alpha-sig.figma.com/img/151c/b8cb/bcb8e52194cafc83e3b9316663abba2d?Expires=1666569600&Signature=NoCXlnJcCgfcDr7JNai1xHiGEF90YqAqVyrbIrgMoBgJlf7~KbWnV7RnAuQsaG2q2r4p4h0mMOYRm9siyChEV-h0ctww577G~incnN1RuNgKFbbnkWfAmtXOAq~XUJhpCNIL~jrieKXs3yl8mGuZr-Q-woOBIcOhXcHFBn90D2tMlEu3Mkmms-zSW8hyLm1SD1ZpOJQnAlUAAthgSs7SLIA4Iq36xIWxQUPPPp8E5CqEDGy5-ACZVKDfuNjdXuwcw3Ng4QWsexklukv7DfUFRZ500C-rR3Xb5x9zI37cfA1RUVlVvg-xguBOtdZakKzNAQI7GGYsvK3kqY8nlmkulw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="{user.handle}" />
                 </div>
                 <div>
-                  <h2 className='font-semibold text-white text-lg'>Rajeev Barma</h2>
+                 <Link to='/profile'> <h2 className='font-semibold text-white text-lg'>Rajeev Barma</h2></Link>
                 </div>
               </div>
               <div>
