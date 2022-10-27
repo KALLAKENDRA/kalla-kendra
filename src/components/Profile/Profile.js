@@ -82,30 +82,30 @@ const Profile = () => {
                 <h4 className="font-thin text-white">Panjab, India</h4>
               </div>
               <div className="mt-12">
-                <button className="bg-[#FFC7C7] text-black w-55 laptopSm:w-53 font-semibold rounded-sm">
+                <button className="bg-[#FFC7C7] text-black w-55 laptopLg:w-55 laptopSm:w-53 font-semibold rounded-sm">
                   Follow
                 </button>
               </div>
               <div className="mt-2">
                 <input
-                  className="bg-white border-solid border border-white h-7 w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12 rounded-sm"
+                  className="bg-white border-solid border border-white h-7 w-55 laptopLg:w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12 rounded-sm"
                   type="text"
                   placeholder="Message"
                 />
               </div>
               <div className="mt-6">
                 <input
-                  className="bg-white border-solid border border-white h-7 w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12 rounded-sm"
+                  className="bg-white border-solid border border-white h-7 w-55 laptopLg:w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12 rounded-sm"
                   type="text"
                   placeholder="Hire me"
                 />
                 <input
-                  className="bg-white border-solid border border-white h-7 w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12"
+                  className="bg-white border-solid border border-white h-7 w-55 laptopLg:w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12"
                   type="text"
                   placeholder="Full time job"
                 />
                 <input
-                  className="bg-white border-solid border border-white h-7 w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12 rounded-sm"
+                  className="bg-white border-solid border border-white h-7 w-55 laptopLg:w-55 laptopSm:w-53 bg-opacity-10 placeholder:text-white placeholder:pl-12 rounded-sm"
                   type="text"
                   placeholder="Freelancing/project"
                 />
@@ -145,7 +145,7 @@ const Profile = () => {
             </div>
             <div className="grid  lg:grid-cols-3 grid-cols-1 mt-8">
               {imgList.map((image) => (
-                <div className="mr-4 mobileMd:mr-0 mobileLg:mr-0 mb-4">
+                <div className="laptopLg:mr-4 laptopSm:mr-4 mobileMd:mr-0 mobileLg:mr-0 mb-4">
                   <img className="shadow-lg h-48 w-54" src={image.img} alt="" />
                 </div>
               ))}

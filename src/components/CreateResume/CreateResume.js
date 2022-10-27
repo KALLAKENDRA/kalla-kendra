@@ -9,7 +9,61 @@ import Navbar3 from "../Shared/Navbar/Navbar3";
 const CreateResume = () => {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, event) => {
+    // event.preventDefault();
+    const firstName = event.target.firstName.value;
+    const middleName = event.target.middleName.value;
+    const lastName = event.target.lastName.value;
+    const email = event.target.email.value;
+    const phoneNo = +event.target.phNumber.value;
+    const alternatePhNo = +event.target.altPhNumber.value;
+    const location = event.target.location.value;
+    const qualification = event.target.qualification.value;
+    const board = event.target.boardName.value;
+    const university = event.target.universityName.value;
+    const age = +event.target.age.value;
+    const sex = event.target.sex.value;
+    const applicationType = event.target.applicationType.value;
+    const occupation = event.target.occupation.value;
+    const jobType = event.target.jobType.value;
+    const yearOfExperience = +event.target.experience.value;
+
+    const user = {
+      firstName,
+      middleName,
+      lastName,
+      email,
+      phoneNo,
+      alternatePhNo,
+      location,
+      qualification,
+      board,
+      university,
+      age,
+      sex,
+      applicationType,
+      occupation,
+      jobType,
+      yearOfExperience,
+    };
+
+    // sent data to the server
+    fetch("http://localhost:5000/user", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => {
+        res.json();
+      })
+      .then((data) => {
+        console.log("success", data);
+        alert("users added successfully !!!");
+        // event.target.reset();
+      });
+
     console.log(data);
   };
   return (
@@ -163,10 +217,13 @@ const CreateResume = () => {
               {/* location input start  */}
 
               <div className="form-control">
-                <label className="label">
+                <label className="label" name="location">
                   <span className=" text-base text-white">Location</span>
                 </label>
-                <select className=" bg-white w-53 laptopSm:w-115 bg-opacity-10   h-7 rounded-md">
+                <select
+                  name="location"
+                  className=" bg-white w-53 laptopSm:w-115 bg-opacity-10   h-7 rounded-md"
+                >
                   <option disabled selected></option>
                   <option>India</option>
                   <option>USA</option>
@@ -182,7 +239,10 @@ const CreateResume = () => {
                   <label className="label">
                     <span className=" text-base text-white">Qualification</span>
                   </label>
-                  <select className="input bg-white h-7 w-53 bg-opacity-10 rounded-md">
+                  <select
+                    name="qualification"
+                    className="input bg-white h-7 w-53 bg-opacity-10 rounded-md"
+                  >
                     <option disabled selected></option>
                     <option>B.A</option>
                     <option>B.Sc</option>
@@ -210,6 +270,7 @@ const CreateResume = () => {
                   </label>
                   <input
                     type="text"
+                    name="occupation"
                     className="input bg-white h-7 w-53 bg-opacity-10 rounded-md"
                     {...register("universityName", {
                       required: {
@@ -233,7 +294,7 @@ const CreateResume = () => {
                   <input
                     type="number"
                     className="input bg-white bg-opacity-10 h-7 rounded-md "
-                    {...register("number", {
+                    {...register("age", {
                       required: {
                         value: true,
                         message: "Number is required",
@@ -245,7 +306,10 @@ const CreateResume = () => {
                   <label className="label">
                     <span className=" text-base text-white">Sex</span>
                   </label>
-                  <select className="input bg-white bg-opacity-10 h-7 rounded-md">
+                  <select
+                    name="sex"
+                    className="input bg-white bg-opacity-10 h-7 rounded-md"
+                  >
                     <option disabled selected></option>
                     <option>Male</option>
                     <option>Female</option>
@@ -265,7 +329,10 @@ const CreateResume = () => {
                       Application type
                     </span>
                   </label>
-                  <select className="input bg-white bg-opacity-10 h-7 rounded-md">
+                  <select
+                    name="applicationType"
+                    className="input bg-white bg-opacity-10 h-7 rounded-md"
+                  >
                     <option disabled selected></option>
                     <option>Internship</option>
                     <option>Contract</option>
@@ -276,7 +343,10 @@ const CreateResume = () => {
                   <label className="label">
                     <span className=" text-base text-white">Occupation</span>
                   </label>
-                  <select className="input h-7 bg-white bg-opacity-10 rounded-md">
+                  <select
+                    name="occupation"
+                    className="input h-7 bg-white bg-opacity-10 rounded-md"
+                  >
                     <option disabled selected></option>
                     <option>Student</option>
                     <option>Engineer</option>
@@ -294,7 +364,10 @@ const CreateResume = () => {
                   <label className="label">
                     <span className=" text-base text-white">Job type</span>
                   </label>
-                  <select className="input bg-white bg-opacity-10 h-7 rounded-md">
+                  <select
+                    name="jobType"
+                    className="input bg-white bg-opacity-10 h-7 rounded-md"
+                  >
                     <option disabled selected></option>
                     <option>Front End Developer</option>
                     <option>Backend Developer</option>
@@ -311,7 +384,7 @@ const CreateResume = () => {
                   <input
                     type="number"
                     className="input h-7 bg-white bg-opacity-10 rounded-md"
-                    {...register("number", {
+                    {...register("experience", {
                       required: {
                         value: true,
                         message: "Number is required",
