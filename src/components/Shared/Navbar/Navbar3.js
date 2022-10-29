@@ -10,10 +10,19 @@ const Navbar3 = () => {
   const normalLink = "font-bold text-white";
 
   return (
+
     <div className="flex ">
       <div className="flex justify-between pl-3 text-white w-full flex-wrap xl:w-6/12 ">
         <div className="">
           <Link to="/">
+
+    <>
+      <div className="flex   items-center justify-around">
+
+        <div className="relative z-10">
+          <Link to="/">
+
+
             <Logo1 />
           </Link>
         </div>
