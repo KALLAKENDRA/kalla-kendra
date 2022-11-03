@@ -15,30 +15,29 @@ const Home = () => {
     <div>
       <img src={bghome} alt="" className="w-full h-full absolute top-0" />
       <div className="flex flex-col h-screen justify-between w-full overflow-hidden">
-      <div className="relative z-50">
-        <Navbar />
-      </div>
-      <div className="w-full relative flex justify-between h-fit ">
-        <img src={homeBannerP1} alt="" className="w-1/12" />
-        <div className="m-auto h-36 flex flex-col justify-evenly">
-          <h1 className="text-4xl text-white font-acme">
-            Welcome! to kalla kendra
-          </h1>
-          <Link to="/startyourjourny">
-            <button className="w-40 h-10 bg-lightRose rounded-full text-iridium text-base font-aclonica hover:bg-yellow">
-              World of Artist
-            </button>
-          </Link>
+        <div className="relative z-50">
+          <Navbar />
         </div>
-        <img src={homeBannerP2} alt="" className="w-1/12" />
-      </div>
-      <div className="flex relative w-full justify-around h-auto">
-      <img className="w-2/12 h-2/4" src={speaker1} alt="speaker" />
-      <img className="w-2/12 h-2/4" src={guitarist1} alt="speaker" />
-      <img className="w-2/12 h-2/4" src={Painter1} alt="speaker" />
-      <img className="w-2/12 h-2/4" src={photographer1} alt="photographer1" />
-      <img className="w-2/12 h-2/4" src={Singer1} alt="speaker" />
-      </div>
+        <div className="w-full relative flex justify-between h-fit ">
+          <img src={homeBannerP1} alt="" className="w-1/12" />
+          <div className="m-auto h-36 flex flex-col justify-evenly">
+            <h1 className="text-4xl text-white font-acme ">
+              Welcome! to kalla kendra
+            </h1>
+            <Link to="/startyourjourny" className="mx-auto">
+              <button className="w-40 h-10 bg-lightRose rounded-full text-iridium text-base font-aclonica hover:bg-yellow">
+                World of Artist //{" "}
+              </button>
+            </Link>
+          </div>
+          <img src={homeBannerP2} alt="" className="w-1/12" />
+        </div>
+        <div className="flex relative w-full justify-around h-auto">
+          <img className="w-2/12 h-2/4" src={speaker1} alt="speaker" />
+          <img className="w-2/12 h-2/4" src={guitarist1} alt="speaker" />
+          <img className="w-2/12 h-2/4" src={Painter1} alt="speaker" />
+          <img className="w-2/12 h-2/4" src={Singer1} alt="speaker" />
+        </div>
       </div>
     </div>
   );
