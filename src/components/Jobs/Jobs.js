@@ -14,24 +14,21 @@ const Jobs = () => {
     <>
 
       <div className="top-0 absolute bg-cover">
-        <img className="w-screen h-screen" src={background} alt="" />
-      </div>
-
-      <div className="top-0 absolute bg-cover">
-        <img className="w-screen h-screen" src={background} alt="" />
+        <img className="w-screen h-2400 mobileMd:h-2112 tablet:h-1840 laptopMd:h-1830 laptopLg:h-960" src={background} alt="" />
       </div>
       <div className="relative">
         <Navbar></Navbar>
       </div>
 
       <div className="flex overflow-x-hidden items-center justify-center">
-        <div className="relative  grid desktopLg:grid-cols-5 desktopMd:grid-cols-5 desktopSm:grid-cols-5 laptopLg:grid-cols-5 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-1 mobileMd:grid-cols-1 mobileLg:grid-cols-1  gap-12   mt-6 ">
-          <div class="btn-group ">
+        <div className="relative  grid desktopLg:grid-cols-5 desktopMd:grid-cols-5 desktopSm:grid-cols-5 
+        laptopLg:grid-cols-5 laptopMd:grid-cols-4 laptopSm:grid-cols-2 tablet:grid-cols-3 mobileMd:grid-cols-1 mobileLg:grid-cols-1  gap-12   mt-6 ">
+          <div class="btn-group tablet:ml-4">
             <button class="btn  bg-darkRed">Part Time</button>
             <button class="btn bg-darkRed">full Time</button>
             <button class="btn bg-vividAuburn">Internship</button>
           </div>
-          <div class="btn-group ">
+          <div class="btn-group  tablet:ml-24">
             <button class="btn bg-darkRed">
 
               Location{" "}
@@ -42,21 +39,21 @@ const Jobs = () => {
             <button class="btn bg-vividAuburn">Remote</button>
             <button class="btn bg-darkRed">In Office</button>
           </div>
-          <div class="btn-group ">
+          <div class="btn-group tablet:ml-4">
             <button class="btn bg-darkRed">Keywords</button>
           </div>
-          <div class="btn-group ">
+          <div class="btn-group laptopMd:ml-4 laptopLg:-ml-14">
             <button class="btn bg-darkRed">
 
-              Search{" "} <img className="text-white ml-2" src={searchIcon} alt="" />
+              <input type="text" placeholder="search" className="tablet:py-2 bg-transparent" name="" id="" /><img className="text-white ml-2" src={searchIcon} alt="" />
             </button>
           </div>
         </div>
 
       </div>
       <div className="relative overflow-x-hidden grid desktopLg:grid-cols-2 desktopMd:grid-cols-2 desktopSm:grid-cols-2 laptopLg:grid-cols-2 laptopMd:grid-cols-1 laptopSm:grid-cols-1 tablet:grid-cols-1 mobileLg:grid-cols-1 mobileMd:grid-cols-1 gap-24 mt-12 ml-2 mr-2">
-        <div className=" font-semibold  flex items-center justify-center">
-          <div className="w-full desktopLg:w-1/2 desktopMd:w-1/2 desktopSm:w-1/2 tablet:w-full mobileLg:w-full mobileMd:w-full bg-white p-24 ">
+        <div className=" font-semibold  flex items-center justify-center desktopSm:-ml-20 desktopMd:mr-20">
+          <div className="w-full desktopLg:w-1/2 desktopMd:w-1/2  tablet:w-full mobileLg:w-full mobileMd:w-full bg-white p-24 ">
             <div className=" flex items-center justify-start pb-4">
               <input type="checkbox" class="checkbox bg-lightGrey mr-2" />
               <p>As Per My Preference</p>
@@ -68,7 +65,7 @@ const Jobs = () => {
               <input
                 type="text"
                 placeholder="Type here"
-                class="input  w-full max-w-xs p-6  max-w-xs bg-lightGrey"
+                class="input  w-full max-w-xs p-6   bg-lightGrey"
               />
             </div>
             <div class="form-control w-full max-w-xs pb-4">
@@ -94,7 +91,7 @@ const Jobs = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col desktopSm:mr-20 desktopSm:-ml-10">
           <div className="mb-12">
             <div class="card w-full bg-base-100 shadow-xl p-6">
               <div className=" flex items-center justify-between pb-6">
