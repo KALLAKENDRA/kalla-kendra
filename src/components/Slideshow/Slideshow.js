@@ -6,6 +6,8 @@ import startjourneyp2 from "../../Assets/startjourneyp2.png";
 import bgCorner1 from "../../Assets/bgCorner1.png";
 import bghome from "../../Assets/bghome.png";
 
+// Shivam Bhagwat
+ 
 const images = [
   {
     id: 1,
