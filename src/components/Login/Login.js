@@ -24,7 +24,7 @@ const Login = () => {
       });
 
       const Data = await responce.json();
-      // console.log(Data.user._id);
+      console.log(Data, "Data");
       if (Data.message) {
         throw new Error(Data.message);
       } else {
