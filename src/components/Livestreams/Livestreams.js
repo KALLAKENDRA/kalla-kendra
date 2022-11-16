@@ -25,7 +25,7 @@ const LivestreamData = [
 
 const Livestreams = () => {
   return (
-    <div className="bg-gradient-to-r from-[#8D0301] to-[#640000] h-screen w-screen fixed flex-1 overflow-y-scroll">
+    <div className="bg-gradient-to-r from-[#8D0301] to-[#640000] h-screen w-full fixed flex-1 overflow-y-scroll">
       <Navbar3 />
       <div className="flex flex-wrap flex-col">
         <div className="w-full md:flex mx-auto w-10/12 justify-between flex-wrap  h-5/6">
@@ -73,7 +73,6 @@ const Livestreams = () => {
                 </div>
                 <div>
                   <Link to="/profile">
-                    {" "}
                     <h2 className="font-semibold text-white text-lg">
                       Rajeev Barma
                     </h2>
@@ -90,51 +89,55 @@ const Livestreams = () => {
             </div>
           </div>
         </div>
-        <div className="pt-8 mx-9">
-          <h1 className="text-2xl font-medium text-white text-left">
+        <div className="w-full md:flex mx-auto w-11/12 justify-between flex-wrap  h-5/6">
+          <h1 className="text-2xl font-medium text-white text-center md:text-left">
             More Livestreams
           </h1>
-        </div>
-        <div className="flex flex-col xl mx-auto:flex-row flex pb-5 gap-5">
-          <div className="flex ml-9 mt-5 gap-3 w-2/5">
-            <img src={cardImg1} alt="" />
-            <div>
-              <h2 className="text-left text-white text-lg">
-                Teaching Filmotography
-              </h2>
-              <p className="text-left text-white text-[10px] mt-5">
-                Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
-                Music Composed by Harris Jayaraj, Direction Gautham Menon.
-              </p>
-              <div className="flex text-xs mt-5">
-                <Link className="bg-[#FFC7C7] py-2 px-8 rounded-lg" to="/">
-                  Watch
-                </Link>
+
+          <div className="flex flex-col flex justify-between md:flex-row flex justify-between">
+            <div className="flex flex-wrap mt-2 w-2/3 flex-row mx-auto xl:flex-nowrap flex gap-2">
+              <img src={cardImg1} alt="" className="" />
+
+              <div>
+                <h2 className="text-left text-white text-lg">
+                  Teaching Filmotography
+                </h2>
+                <p className="text-left text-white text-[12px] mt-5 w-7/12">
+                  Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
+                  Music Composed by Harris Jayaraj, Direction Gautham Menon.
+                </p>
+                <div className="flex text-xs mt-5">
+                  <Link className="bg-[#FFC7C7] py-2 px-8 rounded-lg" to="/">
+                    Watch
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex mt-5 gap-3 w-2/5">
-            <img src={cardImg2} alt="" />
-            <div>
-              <h2 className="text-left text-white text-lg">
-                Teaching Filmotography
-              </h2>
-              <p className="text-left text-white text-[10px] mt-5">
-                Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
-                Music Composed by Harris Jayaraj, Direction Gautham Menon.
-              </p>
-              <div className="flex text-xs mt-5">
-                <Link className="bg-[#FFC7C7] py-2 px-8 rounded-lg" to="/">
-                  Watch
-                </Link>
+            <div className="flex flex-wrap mt-2 w-2/3  flex-row m-auto xl:flex-nowrap flex gap-2">
+              <img src={cardImg2} alt="" className="" />
+
+              <div>
+                <h2 className="text-left text-white text-lg">
+                  Teaching Filmotography
+                </h2>
+                <p className="text-left text-white text-[12px] mt-5 w-7/12">
+                  Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
+                  Music Composed by Harris Jayaraj, Direction Gautham Menon.
+                </p>
+                <div className="flex text-xs mt-5">
+                  <Link className="bg-[#FFC7C7] py-2 px-8 rounded-lg" to="/">
+                    Watch
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex mt-5 gap-3">
-            <img src={cardImg3} alt="" />
+
+            <div className="flex flex-wrap mt-5 w-2/4  flex-row m-auto xl:flex-nowrap justify-end">
+              <img src={cardImg3} alt="" />
+            </div>
           </div>
         </div>
-      </div>
+      </div>{" "}
     </div>
   );
 };
