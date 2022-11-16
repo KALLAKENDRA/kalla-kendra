@@ -94,7 +94,7 @@ const Livestreams = () => {
             More Livestreams
           </h1>
 
-          <div className="flex flex-col flex justify-between md:flex-row flex justify-between">
+          <div className="flex flex-col flex justify-between gap-1 md:flex-row flex justify-between">
             <div className="flex flex-wrap mt-2 w-2/3 flex-row mx-auto xl:flex-nowrap flex gap-2">
               <img src={cardImg1} alt="" className="" />
 
@@ -132,8 +132,23 @@ const Livestreams = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap mt-5 w-2/4  flex-row m-auto xl:flex-nowrap justify-end">
-              <img src={cardImg3} alt="" />
+            <div className="flex flex-wrap mt-2 w-2/3  flex-row m-auto xl:flex-nowrap flex gap-2">
+              <img src={cardImg3} alt="" className="" />
+
+              <div>
+                <h2 className="text-left text-white text-lg">
+                  Teaching Filmotography
+                </h2>
+                <p className="text-left text-white text-[12px] mt-5 w-7/12">
+                  Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
+                  Music Composed by Harris Jayaraj, Direction Gautham Menon.
+                </p>
+                <div className="flex text-xs mt-5">
+                  <Link className="bg-[#FFC7C7] py-2 px-8 rounded-lg" to="/">
+                    Watch
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
