@@ -8,23 +8,6 @@ import cardImg2 from "../../Assets/Rectangle3467598.png";
 import cardImg3 from "../../Assets/Rectangle3467599.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
 
-
-// Not in Use
-// const LivestreamData = [
-//   {
-//     id: 1,
-//     title: "Teaching Filmotography",
-//     detials:
-//       "Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music Composed by Harris Jayaraj, Direction Gautham Menon.",
-//   },
-//   {
-//     id: 2,
-//     title: "Teaching Filmotography",
-//     detials:
-//       "Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music Composed by Harris Jayaraj, Direction Gautham Menon.",
-//   },
-// ];
-
 const Livestreams = () => {
   return (
     <div className="bg-gradient-to-r from-[#8D0301] to-[#640000] h-screen w-full fixed flex-1 overflow-y-scroll">
@@ -35,9 +18,7 @@ const Livestreams = () => {
             <h3 className="text-end text-white text-2xl font-semibold">LIVE</h3>
             <img src={Livestrimcover} alt="" className="w-full md:w-11/12" />
           </div>
-          <div
-            className="flex flex-col  justify-between h-5/6 flex-wrap w-full md:w-5/12"
-          >
+          <div className="flex flex-col  justify-between h-5/6 flex-wrap w-full md:w-5/12">
             <div className="h-2/6  mt-3 w-full md:w-1/11 ">
               <h1 className="text-left text-4xl text-white">
                 Teaching Filmotography
