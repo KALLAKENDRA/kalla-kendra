@@ -8,20 +8,22 @@ import cardImg2 from "../../Assets/Rectangle3467598.png";
 import cardImg3 from "../../Assets/Rectangle3467599.png";
 import Navbar3 from "../Shared/Navbar/Navbar3";
 
-const LivestreamData = [
-  {
-    id: 1,
-    title: "Teaching Filmotography",
-    detials:
-      "Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music Composed by Harris Jayaraj, Direction Gautham Menon.",
-  },
-  {
-    id: 2,
-    title: "Teaching Filmotography",
-    detials:
-      "Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music Composed by Harris Jayaraj, Direction Gautham Menon.",
-  },
-];
+
+// Not in Use
+// const LivestreamData = [
+//   {
+//     id: 1,
+//     title: "Teaching Filmotography",
+//     detials:
+//       "Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music Composed by Harris Jayaraj, Direction Gautham Menon.",
+//   },
+//   {
+//     id: 2,
+//     title: "Teaching Filmotography",
+//     detials:
+//       "Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music Composed by Harris Jayaraj, Direction Gautham Menon.",
+//   },
+// ];
 
 const Livestreams = () => {
   return (
@@ -89,20 +91,20 @@ const Livestreams = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:flex mx-auto w-11/12 justify-between flex-wrap  h-5/6">
+        <div className="w-full p-4 md:flex mx-auto w-screen justify-between flex-wrap  h-5/6">
           <h1 className="text-2xl font-medium text-white text-center md:text-left">
             More Livestreams
           </h1>
 
-          <div className="flex flex-col flex justify-between gap-1 md:flex-row flex justify-between">
-            <div className="flex flex-wrap mt-2 w-2/3 flex-row mx-auto xl:flex-nowrap flex gap-2">
+          <div className="flex flex-col justify-between gap-1  md:flex-row">
+            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  flex gap-2 xl:flex-nowrap">
               <img src={cardImg1} alt="" className="" />
 
               <div>
                 <h2 className="text-left text-white text-lg">
                   Teaching Filmotography
                 </h2>
-                <p className="text-left text-white text-[12px] mt-5 w-7/12">
+                <p className="text-left text-white text-[12px] mt-5 ">
                   Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                   Music Composed by Harris Jayaraj, Direction Gautham Menon.
                 </p>
@@ -113,14 +115,14 @@ const Livestreams = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap mt-2 w-2/3  flex-row m-auto xl:flex-nowrap flex gap-2">
+            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  flex gap-2 xl:flex-nowrap">
               <img src={cardImg2} alt="" className="" />
 
               <div>
                 <h2 className="text-left text-white text-lg">
                   Teaching Filmotography
                 </h2>
-                <p className="text-left text-white text-[12px] mt-5 w-7/12">
+                <p className="text-left text-white text-[12px] mt-5 ">
                   Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                   Music Composed by Harris Jayaraj, Direction Gautham Menon.
                 </p>
@@ -132,14 +134,14 @@ const Livestreams = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap mt-2 w-2/3  flex-row m-auto xl:flex-nowrap flex gap-2">
+            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  flex gap-2 xl:flex-nowrap">
               <img src={cardImg3} alt="" className="" />
 
               <div>
                 <h2 className="text-left text-white text-lg">
                   Teaching Filmotography
                 </h2>
-                <p className="text-left text-white text-[12px] mt-5 w-7/12">
+                <p className="text-left text-white text-[12px] mt-5 ">
                   Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                   Music Composed by Harris Jayaraj, Direction Gautham Menon.
                 </p>
