@@ -30,20 +30,19 @@ const Livestreams = () => {
     <div className="bg-gradient-to-r from-[#8D0301] to-[#640000] h-screen w-full fixed flex-1 overflow-y-scroll">
       <Navbar3 />
       <div className="flex flex-wrap flex-col">
-        <div className="w-full md:flex mx-auto w-10/12 justify-between flex-wrap  h-5/6">
+        <div className=" md:flex mx-auto w-10/12 justify-between flex-wrap  h-5/6">
           <div className="flex flex-col md:w-3/6">
             <h3 className="text-end text-white text-2xl font-semibold">LIVE</h3>
             <img src={Livestrimcover} alt="" className="w-full md:w-11/12" />
           </div>
           <div
             className="flex flex-col  justify-between h-5/6 flex-wrap w-full md:w-5/12"
-            // style={{ backgroundColor: "yellowgreen" }}
           >
             <div className="h-2/6  mt-3 w-full md:w-1/11 ">
               <h1 className="text-left text-4xl text-white">
                 Teaching Filmotography
               </h1>
-              <p className="text-white text-left text-xl mt-1">
+              <p className="text-white  text-xl mt-1 text-justify">
                 Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                 Music Composed by Harris Jayaraj, Direction Gautham Menon.Watch
                 Gharshana Video Songs (720p) Starring Venkatesh, Asin, Music
@@ -91,20 +90,20 @@ const Livestreams = () => {
             </div>
           </div>
         </div>
-        <div className="w-full p-4 md:flex mx-auto w-screen justify-between flex-wrap  h-5/6">
+        <div className=" p-4 md:flex mx-auto justify-between flex-wrap  h-5/6">
           <h1 className="text-2xl font-medium text-white text-center md:text-left">
             More Livestreams
           </h1>
 
           <div className="flex flex-col justify-between gap-1  md:flex-row">
-            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  flex gap-2 xl:flex-nowrap">
+            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  gap-2 xl:flex-nowrap">
               <img src={cardImg1} alt="" className="" />
 
-              <div>
+              <div className="w-3/4">
                 <h2 className="text-left text-white text-lg">
                   Teaching Filmotography
                 </h2>
-                <p className="text-left text-white text-[12px] mt-5 ">
+                <p className="text-justify text-white text-[12px] mt-5 ">
                   Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                   Music Composed by Harris Jayaraj, Direction Gautham Menon.
                 </p>
@@ -115,14 +114,14 @@ const Livestreams = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  flex gap-2 xl:flex-nowrap">
+            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto gap-2 xl:flex-nowrap">
               <img src={cardImg2} alt="" className="" />
 
-              <div>
+              <div className="w-3/4">
                 <h2 className="text-left text-white text-lg">
                   Teaching Filmotography
                 </h2>
-                <p className="text-left text-white text-[12px] mt-5 ">
+                <p className="text-justify text-white text-[12px] mt-5 ">
                   Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                   Music Composed by Harris Jayaraj, Direction Gautham Menon.
                 </p>
@@ -134,14 +133,14 @@ const Livestreams = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  flex gap-2 xl:flex-nowrap">
+            <div className="flex flex-wrap mt-2 w-3/4 flex-row mx-auto  gap-2 xl:flex-nowrap">
               <img src={cardImg3} alt="" className="" />
 
-              <div>
+              <div className="w-3/4">
                 <h2 className="text-left text-white text-lg">
                   Teaching Filmotography
                 </h2>
-                <p className="text-left text-white text-[12px] mt-5 ">
+                <p className="text-justify text-white text-[12px] mt-5 ">
                   Watch Gharshana Video Songs (720p) Starring Venkatesh, Asin,
                   Music Composed by Harris Jayaraj, Direction Gautham Menon.
                 </p>
@@ -154,7 +153,7 @@ const Livestreams = () => {
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };
