@@ -58,7 +58,7 @@ const Signup = () => {
       </div>
 
       <div className="flex justify-center items-center h-screen">
-        <div className=" relative bg-lightGrey bg-opacity-25 w-2/4 rounded-lg">
+        <div className=" relative bg-lightGrey bg-opacity-25 rounded-lg w-11/12 h-fit md:w-2/4">
           <div className="">
             <h2 className="text-4xl font-aclonica pt-14 p-10 pb-14 text-start  text-white">
               Sign Up

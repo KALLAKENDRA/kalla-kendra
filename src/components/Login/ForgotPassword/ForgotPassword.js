@@ -59,7 +59,7 @@ const ForgotPassword = () => {
         />
       </div>
       <div className="flex justify-center items-center h-screen">
-        <div className="relative bg-lightGrey bg-opacity-25 w-2/4 rounded-lg p-2">
+        <div className="relative bg-lightGrey bg-opacity-25  rounded-lg p-2 w-11/12 h-fit md:w-2/4">
           <div>
             <h2 className="text-xl md:text-3xl font-aclonica pt-3 p-2 pb-4 text-start text-white">
               Forget Password
