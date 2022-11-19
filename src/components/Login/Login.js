@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="top-0 absolute bg-cover">
+      <div className="top-0 absolute bg-cover overflow-x-scroll">
         <img className="w-screen h-screen" src={bghome} alt="" />
         <img
           className="w-60  flex absolute left-0 top-0"
@@ -57,11 +57,11 @@ const Login = () => {
         />
       </div>
       <div className="flex justify-center items-center h-screen">
-        <div className="card bg-lightGrey bg-opacity-25 w-2/4">
-          <div>
-            <h2 className="text-4xl font-aclonica pt-14 pb-14 text-left pl-12 text-white">
+        <div className=" relative bg-lightGrey bg-opacity-25 rounded-lg w-11/12 md:w-2/4 ">
+          <div className="">
+            <h2 className="text-4xl font-aclonica pt-14 p-10 pb-14 text-start  text-white">
               Login
-            </h2>{" "}
+            </h2>
             {isError && (
               //  Temporary Prompt FOR ERROR HANDLING
               <div className="alert alert-error shadow-lg">
@@ -105,19 +105,19 @@ const Login = () => {
               </div>
             )}
             <form
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center relative w-full  justify-between"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div className="form-control ">
-                <label className="label">
-                  <span className="label-text text-base font-bold text-white">
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center ">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white ">
                     Email
                   </span>
                 </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="input w-96 bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("email", {
                     required: {
                       value: true,
@@ -130,16 +130,16 @@ const Login = () => {
                   })}
                 />
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-base pt-3 font-bold text-white">
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white">
                     Password
                   </span>
                 </label>
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="input w-96 mb-6 bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("password", {
                     required: {
                       value: true,
@@ -152,20 +152,19 @@ const Login = () => {
                   })}
                 />
               </div>
-              <p className="pb-9 pl-64 text-white underline hover:text-vividGreen">
+              <p className=" mt-5 mb-5   text-white underline hover:text-vividGreen">
                 <Link to="/forgotPass">Forgot Password</Link>
               </p>
 
               <input
-                className="btn border-none w-56 bg-rosewood hover:bg-azure"
+                className="btn border-none w-7/12 bg-rosewood hover:bg-azure"
                 type="submit"
                 value="Login"
               />
             </form>
             <p className="pt-4 pb-14 text-white">
-              Don't have an account?{" "}
+              Don't have an account?
               <Link className="font-bold hover:text-vividGreen" to="/signup">
-                {" "}
                 Sign up
               </Link>
             </p>
