@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 import bgCorner1 from "../../../Assets/bgCorner1.png";
 import bgCorner2 from "../../../Assets/bgCorner2.png";
@@ -58,8 +59,11 @@ const ForgotPassword = () => {
         />
       </div>
       <div className="flex justify-center items-center h-screen">
-        <div className="card bg-lightGrey bg-opacity-25  w-full desktopSm:w-2/4 desktopMd:w-2/4 desktopLg:w-2/4 tablet:w-3/4 mobileLg:w-full mobileMd:w-full h-full desktopSm:h-1/2 desktopMd:h-1/2 desktopLg:h-1/2 laptopSm:h-4/5 laptopMd:h-4/5 laptopLg:h-4/5 tablet:h-4/5  mobileMd:h-full mobileLg:h-full  flex flex-col items-center justify-center">
+        <div className="relative bg-lightGrey bg-opacity-25  rounded-lg p-2 w-11/12 h-fit md:w-2/4">
           <div>
+            <h2 className="text-xl md:text-3xl font-aclonica pt-3 p-2 pb-4 text-start text-white">
+              Forget Password
+            </h2>
             {isError && (
               //  Temporary Prompt FOR ERROR HANDLING
               <div className="alert alert-error shadow-lg">
@@ -82,7 +86,7 @@ const ForgotPassword = () => {
               </div>
             )}
             {tempLogin && (
-              // Temporary Prompt For UPDATED USER
+              // Temporary Prompt For LOGIN
               <div className="alert alert-success shadow-lg">
                 <div>
                   <svg
@@ -102,17 +106,20 @@ const ForgotPassword = () => {
                 </div>
               </div>
             )}
-            <form className="flex flex-col items-center justify-center">
-              <div className="form-control mt-6">
-                <label className="label">
-                  <span className="label-text text-base font-bold text-white">
+            <form
+              className="flex flex-col items-center relative w-full  justify-between"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center ">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white text-left">
                     Email
                   </span>
                 </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96  bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("email", {
                     required: {
                       value: true,
@@ -125,16 +132,16 @@ const ForgotPassword = () => {
                   })}
                 />
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-base pt-3 font-bold text-white">
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white">
                     Password
                   </span>
                 </label>
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("password", {
                     required: {
                       value: true,
@@ -147,20 +154,20 @@ const ForgotPassword = () => {
                   })}
                 />
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-base pt-3 font-bold text-white">
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white text-left">
                     Confirm Password
                   </span>
                 </label>
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="input desktopSm:w-96 desktopMd:w-96 desktopLg:w-96 mobile:w-1/3 bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("Confirmpassword", {
                     required: {
                       value: true,
-                      message: "Password is required",
+                      message: "Confirmpassword Password is required",
                     },
                     minLength: {
                       value: 6,
@@ -171,10 +178,9 @@ const ForgotPassword = () => {
               </div>
 
               <input
-                className="btn border-none w-56 bg-rosewood hover:bg-azure mt-8"
+                className="btn border-none w-11/12 bg-rosewood hover:bg-azure"
                 type="submit"
                 value="Next"
-                onClick={handleSubmit(onSubmit)}
               />
             </form>
           </div>

@@ -58,11 +58,11 @@ const Signup = () => {
       </div>
 
       <div className="flex justify-center items-center h-screen">
-        <div className="card bg-lightGrey bg-opacity-25 w-2/4">
-          <div>
-            <h2 className="text-4xl font-aclonica pt-14 pb-14 text-left pl-12 text-white">
-              Sign up
-            </h2>
+        <div className=" relative bg-lightGrey bg-opacity-25 rounded-lg w-11/12 h-fit md:w-2/4">
+          <div className="">
+            <h2 className="text-4xl font-aclonica pt-14 p-10 pb-14 text-start  text-white">
+              Sign Up
+            </h2>{" "}
             {isError && (
               //  Temporary Prompt FOR ERROR HANDLING
               <div className="alert alert-error shadow-lg">
@@ -85,7 +85,7 @@ const Signup = () => {
               </div>
             )}
             {tempLogin && (
-              //  Temporary Prompt FOR SIGNING UP
+              // Temporary Prompt For LOGIN
               <div className="alert alert-success shadow-lg">
                 <div>
                   <svg
@@ -106,38 +106,41 @@ const Signup = () => {
               </div>
             )}
             <form
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center relative w-full  justify-between"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-base font-bold text-white">
-                    Name
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center ">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white ">
+                    Name{" "}
                   </span>
                 </label>
                 <input
-                  type="text"
-                  placeholder="Enter your name"
-                  className="input w-96 bg-opacity-10"
+                  type="name"
+                  placeholder="Enter your Name"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("Name", {
                     required: {
                       value: true,
                       message: "Name is required",
                     },
+                    pattern: {
+                      message: "Provide a valid name",
+                    },
                   })}
                 />
               </div>
 
-              <div className="form-control ">
-                <label className="label">
-                  <span className="label-text text-base pt-3 font-bold text-white">
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center ">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white ">
                     Email
                   </span>
                 </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="input w-96 bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("email", {
                     required: {
                       value: true,
@@ -150,16 +153,16 @@ const Signup = () => {
                   })}
                 />
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-base pt-3 font-bold text-white">
+              <div className="p-2 form-control flex flex-col flex-wrap w-full items-center">
+                <label className="label text-right md: w-11/12 ">
+                  <span className="label-text text-base font-bold text-white">
                     Password
                   </span>
                 </label>
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="input w-96 mb-6 bg-opacity-10"
+                  className="input w-full md:w-11/12 bg-opacity-10"
                   {...register("password", {
                     required: {
                       value: true,
@@ -174,17 +177,15 @@ const Signup = () => {
               </div>
 
               <input
-                className="btn border-none w-56 mt-4 bg-rosewood hover:bg-azure"
+                className="btn border-none w-11/12 mt-6 bg-rosewood hover:bg-azure"
                 type="submit"
-                value="Sign up"
+                value="Login"
               />
             </form>
-
             <p className="pt-4 pb-14 text-white">
-              Already have an account?{" "}
+              Don't have an account?
               <Link className="font-bold hover:text-vividGreen" to="/login">
-                {" "}
-                Sign in
+                Sign In
               </Link>
             </p>
           </div>
